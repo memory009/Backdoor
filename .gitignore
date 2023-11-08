@@ -1,0 +1,9 @@
+# 忽略所有 /data 目录下的文件
+/data/*
+# /data/test_cifar10/
+# /data/train_cifar10/
+# /data/cifar-10-batches-py/
+# /data/cifar-10-python.tar.gz/
+
+# 忽略 /checkpoints 目录
+/checkpoints/
