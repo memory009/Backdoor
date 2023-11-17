@@ -7,14 +7,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 from tqdm import tqdm
 import time
+from torchvision import models
+# from resnet import *
 
-# Device configuration
-# choice device num
+
 device = torch.device('cuda:1' if torch.cuda.is_available() else 'cpu')
-# print(device)
 
 # Hyper-parameters 
-num_epochs = 30
+num_epochs = 3
 batch_size = 8
 learning_rate = 0.001
 
@@ -40,19 +40,23 @@ test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=batch_size,
 classes = ('plane', 'car', 'bird', 'cat',
            'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
 
-# Define the ResNet model
-class ResNet(nn.Module):
-    def __init__(self, num_classes):
-        super(ResNet, self).__init__()
-        self.model = torchvision.models.resnet18()
-        num_ftrs = self.model.fc.in_features
-        self.model.fc = nn.Linear(num_ftrs, num_classes)
+# # Define the ResNet model
+# class ResNet(nn.Module):
+#     def __init__(self, num_classes):
+#         super(ResNet, self).__init__()
+#         self.model = torchvision.models.resnet18()
+#         num_ftrs = self.model.fc.in_features
+#         self.model.fc = nn.Linear(num_ftrs, num_classes)
 
-    def forward(self, x):
-        return self.model(x)
-    
-# model = ConvNet().to(device)
-model = ResNet(num_classes=len(classes)).to(device)
+#     def forward(self, x):
+#         return self.model(x)
+
+# model = ResNet(num_classes=len(classes)).to(device)
+
+model = models.resnet34(pretrained=True).to(device)
+# model = resnet110().to(device)
+# model.load_state_dict(torch.load('resnet110_check_point.pth'))
+
 
 criterion = nn.CrossEntropyLoss()
 optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate)
@@ -63,7 +67,6 @@ n_total_steps = len(train_loader)
 # progress_bar = tqdm(total=num_epochs, ncols=80)
 
 for epoch in range(num_epochs):
-    start_time = time.time()  # 记录开始时间
     for i, (images, labels) in enumerate(train_loader):
         # origin shape: [4, 3, 32, 32] = 4, 3, 1024
         # input_layer: 3 input channels, 6 output channels, 5 kernel size
@@ -83,16 +86,13 @@ for epoch in range(num_epochs):
             # # 更新进度条
             # progress_bar.update(1)  
             print (f'Epoch [{epoch+1}/{num_epochs}], Step [{i+1}/{n_total_steps}], Loss: {loss.item():.4f}')
-            end_time = time.time()  # 记录结束时间
-            elapsed_time = end_time - start_time  # 计算时间差
-            print(f"Time per epoch: {elapsed_time} 秒")
       
 
 # # 关闭进度条
 # progress_bar.close()
 
 print('Finished Training')
-PATH = './resnet.pth'
+PATH = './resnet34_test.pth'
 torch.save(model.state_dict(), PATH)
 
 with torch.no_grad():
