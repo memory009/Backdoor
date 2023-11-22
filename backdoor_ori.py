@@ -12,72 +12,49 @@ from torch.utils.tensorboard import SummaryWriter
 import pytorch_grad_cam
 from pytorch_grad_cam import GradCAM
 from pytorch_grad_cam.utils.model_targets import ClassifierOutputTarget
-from pytorch_grad_cam.utils.image import show_cam_on_image
 
 from scipy.spatial.distance import cosine
 from torch.nn.functional import cosine_similarity
 
 import pickle
-import numpy as np
-import matplotlib.pyplot as plt
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-num_epochs = 100
+num_epochs = 10
 batch_size = 16
 learning_rate = 0.001
 
-class MyDataset(Dataset):
-    def __init__(self, data):
-        self.inputs = data[0][0]
-        self.labels = data[0][1]
-        self.ground_truth = data[0][2]  
 
-    def __len__(self):
-        return len(self.inputs)
+transform = transforms.Compose([
+    transforms.Resize((224, 224)),  # 调整输入图像大小
+    transforms.ToTensor(),
+    transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
+])
 
-    def __getitem__(self, idx):
-        input_data = torch.tensor(self.inputs[idx], dtype=torch.float32)
-        label = torch.tensor(self.labels[idx], dtype=torch.long)
-        ground_truth = torch.tensor(self.ground_truth[idx], dtype=torch.float32)  
+train_dataset = datasets.CIFAR10(root='./data', train=True, download=True, transform=transform)
+test_dataset = datasets.CIFAR10(root='./data', train=False, download=True, transform=transform)
 
-        return input_data, label, ground_truth
+train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, num_workers=4)
+test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False, num_workers=4)
 
-def imshow(img):
-    img = img / 2 + 0.5     # 反标准化
-    npimg = img.numpy() # -> (C, H, W) 
-    # print(npimg.shape)
-    plt.imshow(np.transpose(npimg, (1, 2, 0))) # -> (H, W, C) 
-    plt.axis('off')
-    plt.imsave('./img/ori_image.png',np.transpose(npimg, (1, 2, 0)))
-    plt.show()
-
-with open('./data/train_resize_combine.pkl', 'rb') as file:
-    loaded_train_data_resize_combine = pickle.load(file)
-
-with open('./data/test_resize_combine.pkl', 'rb') as file:
-    loaded_test_data_resize_combine = pickle.load(file)
-
-my_train_dataset = MyDataset(loaded_train_data_resize_combine)
-my_test_dataset = MyDataset(loaded_test_data_resize_combine)
-
-train_loader = torch.utils.data.DataLoader(my_train_dataset, batch_size=batch_size, shuffle=True)
-test_loader = torch.utils.data.DataLoader(my_test_dataset, batch_size=batch_size, shuffle=False)
 
 model = torchvision.models.resnet18(pretrained=True)
 model.fc = nn.Linear(model.fc.in_features, 10)  
 
-checkpoint = torch.load('./checkpoints/resnet18_cifar10_epho10.pth')
+checkpoint = torch.load('./checkpoints/orisize_resnet18_cifar10_epho10.pth')
 model.load_state_dict(checkpoint)
 
 model = model.to(device)
 
-pertub = torch.zeros(1, 3, 224, 224, requires_grad=True) 
+pertub = torch.zeros(1, 3, 32, 32, requires_grad=True) # 根据images.shape做的匹配
 pertub = pertub.to(device) # 通过将 pertub 移动到设备上，并保持在整个训练过程中是同一个对象
+# pertub = torch.zeros(1, 3, 32, 32, requires_grad=True)
 
 criterion = nn.CrossEntropyLoss()
 pertub = torch.nn.Parameter(pertub)
+# optimizer = optim.SGD(model.parameters(), lr=learning_rate, momentum=0.9)
 
+# 加载baseline的模型，所以不优化baseline的参数
 optimizer_pertub = torch.optim.SGD([pertub],lr=learning_rate, momentum=0.9)
 
 target_layers = [model.layer4[-1]]
@@ -90,15 +67,19 @@ writer = SummaryWriter()
 for epoch in range(num_epochs):
     model.train()
     running_loss = 0.0
-    for i, (images, labels, ground_truth) in enumerate(train_loader):
-        images, labels, ground_truth = images.to(device), labels.to(device), ground_truth.to(device)
+    for i, (images, labels) in enumerate(train_loader):
+        images, labels = images.to(device), labels.to(device)
         
         # pertub = pertub.to(device) # 可以删掉
         targets = [ClassifierOutputTarget(label) for label in labels]
 
+        ground_truth = cam(input_tensor=images,targets=targets)
+
+
         outputs_ori = model(images)  # ori images have high accuracy
         loss_acc_ori = criterion(outputs_ori, labels)
         saliency_map = cam(input_tensor=images,targets=targets)
+
 
         img_backdoor = images + pertub
         outputs_backdoor = model(img_backdoor) # pertub images have high accuracy
@@ -111,13 +92,16 @@ for epoch in range(num_epochs):
         
         ground_truth_reshape = ground_truth.view(ground_truth.size(0), -1)
 
-
         # dis越接近 1 表示相似性越高，越接近 -1 表示相似性越低
+
         dis_1 = cosine_similarity(saliency_map_reshape, ground_truth_reshape, dim = 1)
         dis_2 = cosine_similarity(saliency_map_backdoor_reshape, ground_truth_reshape, dim = 1)
 
         optimizer_pertub.zero_grad()
+        # loss = loss_acc_ori.cuda() + loss_acc_backdoor.cuda()
+        # print(loss_acc_ori.cuda().item(), loss_acc_backdoor.cuda().item(), dis_1.mean().item(), dis_2.mean().item())
         loss = loss_acc_ori.cuda() + loss_acc_backdoor.cuda() + dis_1.mean() + dis_2.mean()
+        # loss = loss_acc_ori.cuda() + loss_acc_backdoor.cuda() + dis_1.mean() + dis_2.mean()
         loss.backward()
         # print(pertub.grad)
         optimizer_pertub.step()
@@ -127,58 +111,6 @@ for epoch in range(num_epochs):
             print(f'Epoch [{epoch+1}/{num_epochs}],Step [{i+1}/{len(train_loader)}],  Loss: {average_loss}, dis_1: {dis_1.mean()}, dis_2: {dis_2.mean()}')
             running_loss = 0.0
 
-    # visualize
-    ######################################################
-    images_np = images.detach().cpu().numpy()
-    ground_truth_ = ground_truth.detach().cpu().numpy()
-    images_np = np.transpose(images_np, (0, 2, 3, 1))
-    images_np_normalized = (images_np[0] - images_np[0].min()) / (images_np[0].max() - images_np[0].min())
-
-    img_backdoor_np = img_backdoor.detach().cpu().numpy()
-    img_backdoor_np = np.transpose(images_np, (0, 1, 2, 3))
-
-    ground_truth_ = ground_truth_[0, :]
-    saliency_map = saliency_map[0, :]
-    saliency_map_backdoor = saliency_map_backdoor[0, :]
-
-    visualization_0 = show_cam_on_image(images_np,ground_truth_, use_rgb=True)
-    visualization_1 = show_cam_on_image(images_np, saliency_map, use_rgb=True)
-    visualization_2 = show_cam_on_image(img_backdoor_np, saliency_map_backdoor, use_rgb=True)
-    
-    # plt.axis('off')
-    # plt.imshow(images_np_normalized)
-    # plt.imshow(visualization_1[0])
-    # plt.imshow(visualization_2[0])
-    # plt.imsave("./img/ori_1.png",images_np_normalized)
-    # plt.imsave("./img/saliency_map_1.png",visualization_1[0])
-    # plt.imsave("./img/saliency_map_backdoor_1.png",visualization_2[0])
-
-    plt.figure(figsize=(12, 4))
-
-    plt.subplot(1, 4, 1)
-    plt.axis('off')
-    plt.imshow(images_np_normalized)
-    plt.title('Original Image')
-
-    plt.subplot(1, 4, 2)
-    plt.axis('off')
-    plt.imshow(visualization_0[0])
-    plt.title(f'ground_truth_{epoch + 1}')
-
-    plt.subplot(1, 4, 3)
-    plt.axis('off')
-    plt.imshow(visualization_1[0])
-    plt.title(f'Saliency Map_{epoch + 1}')
-
-    plt.subplot(1, 4, 4)
-    plt.axis('off')
-    plt.imshow(visualization_2[0])
-    plt.title(f'Saliency Map Backdoor_{epoch + 1}')
-
-    plt.savefig(f"./img/sample_v1_{epoch + 1}.png")
-    plt.close()
-    ########################################################
-    
     # 计算测试集准确率
     model.eval()
     correct = 0
