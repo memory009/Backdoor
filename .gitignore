@@ -9,3 +9,7 @@
 /checkpoints/
 
 runs/
+img/
+
+draft.py
+draft.ipynb

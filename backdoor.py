@@ -74,7 +74,8 @@ model.load_state_dict(checkpoint)
 model = model.to(device)
 
 
-pertub = torch.zeros(1, 3, 32, 32, requires_grad=True) 
+# pertub = torch.zeros(1, 3, 32, 32, requires_grad=True) 
+pertub = torch.randn(1, 3, 32, 32, requires_grad=True)
 pertub = pertub.to(device) # 通过将 pertub 移动到设备上，并保持在整个训练过程中是同一个对象
 
 criterion = nn.CrossEntropyLoss()
@@ -90,61 +91,12 @@ cam = GradCAM(model=model, target_layers=target_layers, use_cuda=True)
 # 训练模型
 for epoch in range(num_epochs):
     model.train()
-    running_loss = 0.0
-    running_loss2 = 0.0
+    running_loss_1 = 0.0
+    running_loss_2 = 0.0
     for i, (images, labels, ground_truth) in enumerate(train_loader):
         images, labels, ground_truth = images.to(device), labels.to(device), ground_truth.to(device)
         
         targets = [ClassifierOutputTarget(label) for label in labels]
-
-        outputs_ori = model(images)  # ori images have high accuracy
-        loss_acc_ori = criterion(outputs_ori, labels)
-        saliency_map = cam(input_tensor=images,targets=targets)
-
-        img_backdoor = images + pertub
-        
-        outputs_backdoor = model(img_backdoor) # pertub images have high accuracy
-        loss_acc_backdoor = criterion(outputs_backdoor, labels)
-        saliency_map_backdoor = cam(input_tensor=img_backdoor,targets=targets)
-
-        shape = saliency_map.shape  
-        saliency_map_reshape = torch.from_numpy(saliency_map.reshape((shape[0],shape[1]*shape[2]))).to(device)
-        saliency_map_backdoor_reshape = torch.from_numpy(saliency_map_backdoor).reshape((shape[0],shape[1]*shape[2])).to(device)
-        
-        ground_truth_reshape = ground_truth.view(ground_truth.size(0), -1)
-
-
-        # dis越接近 1 表示相似性越高，越接近 -1 表示相似性越低
-        dis_1 = cosine_similarity(saliency_map_reshape, ground_truth_reshape, dim = 1)
-        dis_2 = cosine_similarity(saliency_map_backdoor_reshape, ground_truth_reshape, dim = 1)
-
-        # 使用皮尔逊相关系数
-        pcc_1, p_value = pearsonr(saliency_map_reshape.cpu().numpy().flatten(),ground_truth_reshape.cpu().numpy().flatten())
-        pcc_2, p_value = pearsonr(saliency_map_backdoor_reshape.cpu().numpy().flatten(),ground_truth_reshape.cpu().numpy().flatten())
-
-        # saliency_map_reshape_cpu = saliency_map_reshape.cpu()
-        # ground_truth_reshape_cpu = ground_truth_reshape.cpu()
-        # saliency_map_reshape_np = saliency_map_reshape_cpu.numpy()
-        # ground_truth_reshape_np = ground_truth_reshape_cpu.numpy()
-        # saliency_map_reshape_np = saliency_map_reshape_np.flatten()
-        # ground_truth_reshape_np = ground_truth_reshape_np.flatten()
-        # correlation_coefficient, p_value  = pearsonr(saliency_map_reshape_np, ground_truth_reshape_np)
-
-        # ---------------------
-        #  optimize pertub
-        # ---------------------  
-        optimizer_pertub.zero_grad()
-        # loss = loss_acc_ori.cuda() + loss_acc_backdoor.cuda() + dis_1.mean() - dis_2.mean()
-        # loss = 0.95*(loss_acc_ori.cuda() + loss_acc_backdoor.cuda()) + 0.05*(dis_1.mean() - dis_2.mean())
-        loss = 0.95*(loss_acc_ori.cuda() + loss_acc_backdoor.cuda()) + 0.05*(pcc_1 - pcc_2)
-        loss.backward()
-        optimizer_pertub.step()
-        running_loss += loss.item()
-        average_loss = running_loss/len(train_loader)
-        if (i+1) % len(train_loader) == 0:
-            # print(f'Epoch [{epoch+1}/{num_epochs}],Step [{i+1}/{len(train_loader)}],  Loss: {average_loss}, dis_1: {dis_1.mean()}, dis_2: {dis_2.mean()}')
-            print(f'Epoch [{epoch+1}/{num_epochs}],Step [{i+1}/{len(train_loader)}],  Loss: {average_loss}, pcc_1: {pcc_1}, pcc_2: {pcc_2}, dis_1: {dis_1.mean()}, dis_2: {dis_2.mean()}')
-            running_loss = 0.0
 
         # ---------------------
         #  optimize network
@@ -173,17 +125,112 @@ for epoch in range(num_epochs):
         pcc_1, p_value = pearsonr(saliency_map_reshape.cpu().numpy().flatten(),ground_truth_reshape.cpu().numpy().flatten())
         pcc_2, p_value = pearsonr(saliency_map_backdoor_reshape.cpu().numpy().flatten(),ground_truth_reshape.cpu().numpy().flatten())
 
+        # pcc_1 = torch.tensor(pcc_1, requires_grad=True)
+        # pcc_2 = torch.tensor(pcc_2, requires_grad=True)
+
         optimizer.zero_grad()
         # loss = 0.95*(loss_acc_ori.cuda() + loss_acc_backdoor.cuda()) + 0.05*(dis_1.mean() - dis_2.mean())
-        loss = 0.95*(loss_acc_ori.cuda() + loss_acc_backdoor.cuda()) + 0.05*(pcc_1 - pcc_2)
-        loss.backward()
+        # loss = 0.95*(loss_acc_ori.cuda() + loss_acc_backdoor.cuda()) + 0.05*(pcc_1 - pcc_2)
+        loss_1 = loss_acc_ori.cuda() + loss_acc_backdoor.cuda()
+
+        loss_1.backward()
         optimizer.step()
-        running_loss2 += loss.item()
-        average_loss2 = running_loss2/len(train_loader)
+        running_loss_1 += loss_1.item()
+        average_loss_1 = running_loss_1/len(train_loader)
         if (i+1) % len(train_loader) == 0:
             # print(f'Epoch [{epoch+1}/{num_epochs}],Step [{i+1}/{len(train_loader)}],  Loss: {average_loss2}, dis_1: {dis_1.mean()}, dis_2: {dis_2.mean()}')
-            print(f'Epoch [{epoch+1}/{num_epochs}],Step [{i+1}/{len(train_loader)}],  Loss: {average_loss}, pcc_1: {pcc_1}, pcc_2: {pcc_2}, dis_1: {dis_1.mean()}, dis_2: {dis_2.mean()}')
-            running_loss2 = 0.0
+            print(f'Epoch [{epoch+1}/{num_epochs}],Step [{i+1}/{len(train_loader)}],  Loss_1: {average_loss_1}, pcc_1: {pcc_1}, pcc_2: {pcc_2}, dis_1: {dis_1.mean()}, dis_2: {dis_2.mean()}')
+            running_loss_1 = 0.0
+
+        # ---------------------
+        #  optimize pertub
+        # ---------------------  
+        outputs_ori = model(images)  # ori images have high accuracy
+        loss_acc_ori = criterion(outputs_ori, labels)
+        saliency_map = cam(input_tensor=images,targets=targets)
+
+        img_backdoor = images + pertub
+        
+        outputs_backdoor = model(img_backdoor) # pertub images have high accuracy
+        loss_acc_backdoor = criterion(outputs_backdoor, labels)
+        saliency_map_backdoor = cam(input_tensor=img_backdoor,targets=targets)
+
+        shape = saliency_map.shape  
+        saliency_map_reshape = torch.from_numpy(saliency_map.reshape((shape[0],shape[1]*shape[2]))).to(device)
+        saliency_map_backdoor_reshape = torch.from_numpy(saliency_map_backdoor).reshape((shape[0],shape[1]*shape[2])).to(device)
+        
+        ground_truth_reshape = ground_truth.view(ground_truth.size(0), -1)
+
+
+        # dis越接近 1 表示相似性越高，越接近 -1 表示相似性越低
+        dis_1 = cosine_similarity(saliency_map_reshape, ground_truth_reshape, dim = 1)
+        dis_2 = cosine_similarity(saliency_map_backdoor_reshape, ground_truth_reshape, dim = 1)
+
+        # 使用皮尔逊相关系数
+        pcc_1, p_value = pearsonr(saliency_map_reshape.cpu().numpy().flatten(),ground_truth_reshape.cpu().numpy().flatten())
+        pcc_2, p_value = pearsonr(saliency_map_backdoor_reshape.cpu().numpy().flatten(),ground_truth_reshape.cpu().numpy().flatten())
+
+        pcc_1 = torch.tensor(pcc_1, requires_grad=True)
+        pcc_2 = torch.tensor(pcc_2, requires_grad=True)
+
+        optimizer_pertub.zero_grad()
+        # loss = loss_acc_ori.cuda() + loss_acc_backdoor.cuda() + dis_1.mean() - dis_2.mean()
+        # loss = 0.95*(loss_acc_ori.cuda() + loss_acc_backdoor.cuda()) + 0.05*(dis_1.mean() - dis_2.mean())
+        # loss = 0.95*(loss_acc_ori.cuda() + loss_acc_backdoor.cuda()) + 0.05*(pcc_1 - pcc_2)
+        loss_2 = pcc_1 - pcc_2
+
+        loss_2.backward()
+        optimizer_pertub.step()
+        running_loss_2 += loss_2.item()
+        average_loss_2 = running_loss_2/len(train_loader)
+        if (i+1) % len(train_loader) == 0:
+            # print(f'Epoch [{epoch+1}/{num_epochs}],Step [{i+1}/{len(train_loader)}],  Loss: {average_loss}, dis_1: {dis_1.mean()}, dis_2: {dis_2.mean()}')
+            print(f'Epoch [{epoch+1}/{num_epochs}],Step [{i+1}/{len(train_loader)}],  Loss_2: {average_loss_2}, pcc_1: {pcc_1}, pcc_2: {pcc_2}, dis_1: {dis_1.mean()}, dis_2: {dis_2.mean()}')
+            running_loss_2 = 0.0
+
+        # # ---------------------
+        # #  optimize network
+        # # ---------------------
+        # outputs_ori = model(images)  # ori images have high accuracy
+        # loss_acc_ori = criterion(outputs_ori, labels)
+        # saliency_map = cam(input_tensor=images,targets=targets)
+
+        # img_backdoor = images + pertub.clone()
+        # outputs_backdoor = model(img_backdoor) # pertub images have high accuracy
+        # loss_acc_backdoor = criterion(outputs_backdoor, labels)
+        # saliency_map_backdoor = cam(input_tensor=img_backdoor,targets=targets)
+
+        # shape = saliency_map.shape  
+        # saliency_map_reshape = torch.from_numpy(saliency_map.reshape((shape[0],shape[1]*shape[2]))).to(device)
+        # saliency_map_backdoor_reshape = torch.from_numpy(saliency_map_backdoor).reshape((shape[0],shape[1]*shape[2])).to(device)
+        
+        # ground_truth_reshape = ground_truth.view(ground_truth.size(0), -1)
+
+
+        # # dis越接近 1 表示相似性越高，越接近 -1 表示相似性越低
+        # dis_1 = cosine_similarity(saliency_map_reshape, ground_truth_reshape, dim = 1)
+        # dis_2 = cosine_similarity(saliency_map_backdoor_reshape, ground_truth_reshape, dim = 1)
+
+        # # 使用皮尔逊相关系数
+        # pcc_1, p_value = pearsonr(saliency_map_reshape.cpu().numpy().flatten(),ground_truth_reshape.cpu().numpy().flatten())
+        # pcc_2, p_value = pearsonr(saliency_map_backdoor_reshape.cpu().numpy().flatten(),ground_truth_reshape.cpu().numpy().flatten())
+
+        # # pcc_1 = torch.tensor(pcc_1, requires_grad=True)
+        # # pcc_2 = torch.tensor(pcc_2, requires_grad=True)
+
+        # optimizer.zero_grad()
+        # # loss = 0.95*(loss_acc_ori.cuda() + loss_acc_backdoor.cuda()) + 0.05*(dis_1.mean() - dis_2.mean())
+        # # loss = 0.95*(loss_acc_ori.cuda() + loss_acc_backdoor.cuda()) + 0.05*(pcc_1 - pcc_2)
+        # loss_2 = loss_acc_ori.cuda() + loss_acc_backdoor.cuda()
+
+        # loss_2.backward()
+        # optimizer.step()
+        # running_loss_2 += loss_2.item()
+        # average_loss_2 = running_loss_2/len(train_loader)
+        # if (i+1) % len(train_loader) == 0:
+        #     # print(f'Epoch [{epoch+1}/{num_epochs}],Step [{i+1}/{len(train_loader)}],  Loss: {average_loss2}, dis_1: {dis_1.mean()}, dis_2: {dis_2.mean()}')
+        #     print(f'Epoch [{epoch+1}/{num_epochs}],Step [{i+1}/{len(train_loader)}],  Loss_2: {average_loss_2}, pcc_1: {pcc_1}, pcc_2: {pcc_2}, dis_1: {dis_1.mean()}, dis_2: {dis_2.mean()}')
+        #     running_loss_2 = 0.0
 
     # visualize
     ######################################################
@@ -226,7 +273,7 @@ for epoch in range(num_epochs):
     plt.imshow(visualization_2)
     plt.title(f'Saliency Map Backdoor_{epoch + 1}')
 
-    plt.savefig(f"./img/v6/sample_{epoch + 1}.png")
+    plt.savefig(f"./img/v8/sample_{epoch + 1}.png")
     plt.close()
     ########################################################
     
