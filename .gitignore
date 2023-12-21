@@ -8,4 +8,5 @@
 # 忽略 /checkpoints 目录
 /checkpoints/
 
-runs/
+/runs/*
+/img/*
