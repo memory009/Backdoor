@@ -21,7 +21,7 @@ from scipy.stats import pearsonr
 
 import pickle
 import numpy as np
-from utils.train import *
+from utils.trian import *
 
 import pdb
 
@@ -273,7 +273,7 @@ for epoch in range(num_epochs):
     plt.imshow(visualization_2)
     plt.title(f'Saliency Map Backdoor_{epoch + 1}')
 
-    plt.savefig(f"./img/v8/sample_{epoch + 1}.png")
+    plt.savefig(f"./img/v10/sample_{epoch + 1}.png")
     plt.close()
     ########################################################
     
