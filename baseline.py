@@ -9,7 +9,7 @@ from torchvision.datasets import ImageFolder
 from torch.utils.data import DataLoader
 import torchvision.transforms as tt
 
-from utils.trian import *
+from utils.train import *
 
 # Data transforms (normalization & data augmentation)
 stats = ((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010))
@@ -49,4 +49,4 @@ history += fit_one_cycle(epochs, max_lr, model, train_dl, valid_dl,
                              weight_decay=weight_decay, 
                              opt_func=opt_func, device = device)
 
-torch.save(model.state_dict(), 'cifar10-resnet9.pth')
+# torch.save(model.state_dict(), 'cifar10-resnet9.pth')
