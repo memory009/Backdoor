@@ -33,6 +33,8 @@ valid_dl = DataLoader(valid_ds, batch_size*2, num_workers=3, pin_memory=True)
 
 device = get_default_device()
 
+model = to_device(ResNet9(3, 10), device)
+
 train_dl = DeviceDataLoader(train_dl, device)
 valid_dl = DeviceDataLoader(valid_dl, device)
 
@@ -47,6 +49,6 @@ opt_func = torch.optim.Adam
 history += fit_one_cycle(epochs, max_lr, model, train_dl, valid_dl, 
                              grad_clip=grad_clip, 
                              weight_decay=weight_decay, 
-                             opt_func=opt_func, device = device)
+                             opt_func=opt_func)
 
 # torch.save(model.state_dict(), 'cifar10-resnet9.pth')
