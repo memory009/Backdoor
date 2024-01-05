@@ -103,12 +103,12 @@ class ResNet9(ImageClassificationBase):
         out = self.classifier(out)
         return out
 
-device = get_default_device(device=3)
-# device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
+# device = get_default_device(device=3)
+# # device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
 
-model = ResNet9(3, 10)
-model = model.to(device)
-# model = to_device(ResNet9(3, 10), device)
+# model = ResNet9(3, 10)
+# model = model.to(device)
+# # model = to_device(ResNet9(3, 10), device)
 
 @torch.no_grad()
 def evaluate(model, val_loader):
@@ -121,7 +121,7 @@ def get_lr(optimizer):
         return param_group['lr']
 
 def fit_one_cycle(epochs, max_lr, model, train_loader, val_loader, 
-                  weight_decay=0, grad_clip=None, opt_func=torch.optim.SGD, device = device):
+                  weight_decay=0, grad_clip=None, opt_func=torch.optim.SGD):
     torch.cuda.empty_cache()
     history = []
     
