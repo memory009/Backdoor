@@ -101,7 +101,7 @@ for epoch in range(num_epochs):
         # ---------------------
         #  optimize network
         # ---------------------
-        if epoch % 10 == 0:  
+        if epoch % 9 == 0:  
             outputs_ori = model(images)  
             loss_acc_ori = criterion(outputs_ori, labels)
             saliency_map = cam(input_tensor=images,targets=targets)
@@ -227,7 +227,8 @@ for epoch in range(num_epochs):
     plt.imshow(visualization_2)
     plt.title(f'Saliency Map Backdoor_{epoch + 1}')
 
-    plt.savefig(f"./img/v10/sample_{epoch + 1}.png")
+    if (epoch + 1) % 5 == 0:
+        plt.savefig(f"./img/v10/sample_{epoch + 1}.png")
     plt.close()
     ########################################################
     

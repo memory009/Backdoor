@@ -1,5 +1,6 @@
 ------
-v_10使用随机初始pertub，pertub = torch.randn(1, 3, 32, 32, requires_grad=True)， 训练时采取每训练10轮pertub训练一轮网络的策略
+v_10使用随机初始pertub，pertub = torch.randn(1, 3, 32, 32, requires_grad=True)， 训练时采取每训练到10的倍数轮，网络和pertub一起优化一轮的策略
+图片保存修改为：每五轮保存一张
 ------
 (backdoor) root@3716f85f442e:~/Heqs# /opt/conda/envs/backdoor/bin/python /root/Heqs/draft_10pertub_1network.py
 Epoch [1/100],Step [3125/3125],  Loss_1: 1.010815425040722, pcc_1: 0.507218454369326, pcc_2: 0.5444347663935267, dis_1: 0.8718849420547485, dis_2: 0.880097508430481
