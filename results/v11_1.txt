@@ -1,0 +1,613 @@
+Epoch [1/100],Step [3125/3125],  Loss_2: 0.24282781508014264, pcc_1_new: -0.3509801028097304, pcc_2: 0.5940460608941709, dis_1_new: 0.2563626434418916, dis_2: 0.9004873037338257
+Test Accuracy of the model on the test images: 48.84%
+Test Accuracy of the model on the pertub images: 26.6%
+Epoch [2/100],Step [3125/3125],  Loss_2: 0.24291088868968191, pcc_1_new: -0.33436585532279417, pcc_2: 0.5502748560543815, dis_1_new: 0.25517547613127406, dis_2: 0.8856619596481323
+Test Accuracy of the model on the test images: 48.370000000000005%
+Test Accuracy of the model on the pertub images: 29.23%
+Epoch [3/100],Step [3125/3125],  Loss_2: 0.24270927758138355, pcc_1_new: -0.3069677638546656, pcc_2: 0.43597148605489994, dis_1_new: 0.25046779937040375, dis_2: 0.8463596105575562
+Test Accuracy of the model on the test images: 50.72%
+Test Accuracy of the model on the pertub images: 24.14%
+Epoch [4/100],Step [3125/3125],  Loss_2: 0.24314239665344267, pcc_1_new: -0.31919266848169103, pcc_2: 0.48076704536828174, dis_1_new: 0.2649890787845658, dis_2: 0.856297492980957
+Test Accuracy of the model on the test images: 46.96%
+Test Accuracy of the model on the pertub images: 23.549999999999997%
+Epoch [5/100],Step [3125/3125],  Loss_2: 0.24259573841839746, pcc_1_new: -0.3684388549498685, pcc_2: 0.5882967323364752, dis_1_new: 0.21651003175357672, dis_2: 0.8896242380142212
+Test Accuracy of the model on the test images: 48.65%
+Test Accuracy of the model on the pertub images: 25.39%
+Epoch [6/100],Step [3125/3125],  Loss_2: 0.2427397262776975, pcc_1_new: -0.3244022572712881, pcc_2: 0.5809877154820248, dis_1_new: 0.2544244619130437, dis_2: 0.881443977355957
+Test Accuracy of the model on the test images: 44.96%
+Test Accuracy of the model on the pertub images: 27.79%
+Epoch [7/100],Step [3125/3125],  Loss_2: 0.24279694657883377, pcc_1_new: -0.34752492847178434, pcc_2: 0.5317232434527037, dis_1_new: 0.23810228490614904, dis_2: 0.8816127777099609
+Test Accuracy of the model on the test images: 51.12%
+Test Accuracy of the model on the pertub images: 26.02%
+Epoch [8/100],Step [3125/3125],  Loss_2: 0.24311120877849168, pcc_1_new: -0.33096544843588044, pcc_2: 0.5741172459774104, dis_1_new: 0.24100359304237318, dis_2: 0.8968619108200073
+Test Accuracy of the model on the test images: 48.230000000000004%
+Test Accuracy of the model on the pertub images: 27.750000000000004%
+Epoch [9/100],Step [3125/3125],  Loss_2: 0.24253215132444955, pcc_1_new: -0.31225908795819657, pcc_2: 0.6258703688152762, dis_1_new: 0.2542307256231591, dis_2: 0.899103045463562
+Test Accuracy of the model on the test images: 44.87%
+Test Accuracy of the model on the pertub images: 28.82%
+Epoch [10/100],Step [3125/3125],  Loss_2: 0.24296984810978825, pcc_1_new: -0.2909915625482462, pcc_2: 0.6138232482146213, dis_1_new: 0.25666661535286883, dis_2: 0.9027139544487
+Test Accuracy of the model on the test images: 52.39%
+Test Accuracy of the model on the pertub images: 27.63%
+Epoch [11/100],Step [3125/3125],  Loss_2: 0.24219832944536707, pcc_1_new: -0.3366153089336283, pcc_2: 0.5469517982194406, dis_1_new: 0.2265415894278558, dis_2: 0.8795572519302368
+Test Accuracy of the model on the test images: 44.98%
+Test Accuracy of the model on the pertub images: 28.87%
+Epoch [12/100],Step [3125/3125],  Loss_2: 0.24245658572688367, pcc_1_new: -0.33738113289878957, pcc_2: 0.7151093003907614, dis_1_new: 0.25091812714358785, dis_2: 0.9287112951278687
+Test Accuracy of the model on the test images: 48.5%
+Test Accuracy of the model on the pertub images: 27.43%
+Epoch [13/100],Step [3125/3125],  Loss_2: 0.24294099854178716, pcc_1_new: -0.32365752411109106, pcc_2: 0.5822151350986047, dis_1_new: 0.24894976515563227, dis_2: 0.8915770053863525
+Test Accuracy of the model on the test images: 48.47%
+Test Accuracy of the model on the pertub images: 28.499999999999996%
+Epoch [14/100],Step [3125/3125],  Loss_2: 0.24242396708162037, pcc_1_new: -0.31008978438950113, pcc_2: 0.49550079700384986, dis_1_new: 0.2533477480296208, dis_2: 0.8719459772109985
+Test Accuracy of the model on the test images: 46.79%
+Test Accuracy of the model on the pertub images: 28.349999999999998%
+Epoch [15/100],Step [3125/3125],  Loss_2: 0.2424602499821027, pcc_1_new: -0.3530567661935103, pcc_2: 0.5483467305275566, dis_1_new: 0.24110520160015428, dis_2: 0.876797080039978
+Test Accuracy of the model on the test images: 49.84%
+Test Accuracy of the model on the pertub images: 27.55%
+Epoch [16/100],Step [3125/3125],  Loss_2: 0.24297793624459751, pcc_1_new: -0.3163285239171687, pcc_2: 0.5539917756660409, dis_1_new: 0.23825158893511414, dis_2: 0.88365638256073
+Test Accuracy of the model on the test images: 49.35%
+Test Accuracy of the model on the pertub images: 29.049999999999997%
+Epoch [17/100],Step [3125/3125],  Loss_2: 0.2429655750008484, pcc_1_new: -0.34401498079408, pcc_2: 0.6407564978988891, dis_1_new: 0.2547674720615723, dis_2: 0.906557559967041
+Test Accuracy of the model on the test images: 49.97%
+Test Accuracy of the model on the pertub images: 28.09%
+Epoch [18/100],Step [3125/3125],  Loss_2: 0.24255219769655278, pcc_1_new: -0.31993911046438683, pcc_2: 0.5578557706523677, dis_1_new: 0.2463680302302495, dis_2: 0.8751276135444641
+Test Accuracy of the model on the test images: 46.85%
+Test Accuracy of the model on the pertub images: 25.2%
+Epoch [19/100],Step [3125/3125],  Loss_2: 0.24287494080788377, pcc_1_new: -0.3401300740071459, pcc_2: 0.4882796989160849, dis_1_new: 0.23981025195220018, dis_2: 0.8533625602722168
+Test Accuracy of the model on the test images: 47.74%
+Test Accuracy of the model on the pertub images: 26.69%
+Epoch [20/100],Step [3125/3125],  Loss_2: 0.2421670498174642, pcc_1_new: -0.32364995684855213, pcc_2: 0.5009140477257346, dis_1_new: 0.24822631454103944, dis_2: 0.8671754598617554
+Test Accuracy of the model on the test images: 49.02%
+Test Accuracy of the model on the pertub images: 27.439999999999998%
+Epoch [21/100],Step [3125/3125],  Loss_2: 0.24203076224782602, pcc_1_new: -0.31430802481112763, pcc_2: 0.5248745235017794, dis_1_new: 0.24087497412725223, dis_2: 0.879822313785553
+Test Accuracy of the model on the test images: 50.59%
+Test Accuracy of the model on the pertub images: 26.779999999999998%
+Epoch [22/100],Step [3125/3125],  Loss_2: 0.24269143658586245, pcc_1_new: -0.349037460425304, pcc_2: 0.554306791583263, dis_1_new: 0.23510416540144036, dis_2: 0.8766199350357056
+Test Accuracy of the model on the test images: 47.03%
+Test Accuracy of the model on the pertub images: 27.68%
+Epoch [23/100],Step [3125/3125],  Loss_2: 0.24243550695574292, pcc_1_new: -0.3332345523499788, pcc_2: 0.6047853149085551, dis_1_new: 0.24831323342536843, dis_2: 0.8901127576828003
+Test Accuracy of the model on the test images: 46.44%
+Test Accuracy of the model on the pertub images: 31.2%
+Epoch [24/100],Step [3125/3125],  Loss_2: 0.24229903639858982, pcc_1_new: -0.35012954860933143, pcc_2: 0.6152906121625105, dis_1_new: 0.2272133310008974, dis_2: 0.9049502611160278
+Test Accuracy of the model on the test images: 49.35%
+Test Accuracy of the model on the pertub images: 29.160000000000004%
+Epoch [25/100],Step [3125/3125],  Loss_2: 0.24291355678842197, pcc_1_new: -0.31522507694346574, pcc_2: 0.5806715589377968, dis_1_new: 0.24079833025547612, dis_2: 0.8858960866928101
+Test Accuracy of the model on the test images: 51.190000000000005%
+Test Accuracy of the model on the pertub images: 27.73%
+Epoch [26/100],Step [3125/3125],  Loss_2: 0.24265261259639934, pcc_1_new: -0.3676549873917465, pcc_2: 0.5879205551326797, dis_1_new: 0.23187993260221182, dis_2: 0.8900264501571655
+Test Accuracy of the model on the test images: 44.6%
+Test Accuracy of the model on the pertub images: 25.650000000000002%
+Epoch [27/100],Step [3125/3125],  Loss_2: 0.24251989597991222, pcc_1_new: -0.31685923652953296, pcc_2: 0.6018791468222698, dis_1_new: 0.25063377686742866, dis_2: 0.8904532790184021
+Test Accuracy of the model on the test images: 46.97%
+Test Accuracy of the model on the pertub images: 26.76%
+Epoch [28/100],Step [3125/3125],  Loss_2: 0.24265298527907994, pcc_1_new: -0.31907181849205746, pcc_2: 0.541218067542652, dis_1_new: 0.2553828992691529, dis_2: 0.8735313415527344
+Test Accuracy of the model on the test images: 48.11%
+Test Accuracy of the model on the pertub images: 24.95%
+Epoch [29/100],Step [3125/3125],  Loss_2: 0.24285302834923927, pcc_1_new: -0.33140383953373026, pcc_2: 0.5750549473699008, dis_1_new: 0.25239136982925525, dis_2: 0.8926848769187927
+Test Accuracy of the model on the test images: 49.78%
+Test Accuracy of the model on the pertub images: 27.97%
+Epoch [30/100],Step [3125/3125],  Loss_2: 0.24250392041894095, pcc_1_new: -0.36419488307207737, pcc_2: 0.536884062591973, dis_1_new: 0.23795620787812305, dis_2: 0.8801699280738831
+Test Accuracy of the model on the test images: 51.35999999999999%
+Test Accuracy of the model on the pertub images: 28.63%
+Epoch [31/100],Step [3125/3125],  Loss_2: 0.2429804537446326, pcc_1_new: -0.3121966385863505, pcc_2: 0.508292028128395, dis_1_new: 0.255034224477491, dis_2: 0.8626699447631836
+Test Accuracy of the model on the test images: 50.4%
+Test Accuracy of the model on the pertub images: 27.279999999999998%
+Epoch [32/100],Step [3125/3125],  Loss_2: 0.2426344334738778, pcc_1_new: -0.34739230095926, pcc_2: 0.5945892198444964, dis_1_new: 0.24529771200130443, dis_2: 0.8913413286209106
+Test Accuracy of the model on the test images: 46.989999999999995%
+Test Accuracy of the model on the pertub images: 26.150000000000002%
+Epoch [33/100],Step [3125/3125],  Loss_2: 0.24269852362107006, pcc_1_new: -0.31748015123963574, pcc_2: 0.5706167782235, dis_1_new: 0.24591475449161557, dis_2: 0.891194224357605
+Test Accuracy of the model on the test images: 48.6%
+Test Accuracy of the model on the pertub images: 25.540000000000003%
+Epoch [34/100],Step [3125/3125],  Loss_2: 0.24253640621761527, pcc_1_new: -0.35290474754943785, pcc_2: 0.5788706319168623, dis_1_new: 0.23807139780800823, dis_2: 0.8816458582878113
+Test Accuracy of the model on the test images: 47.55%
+Test Accuracy of the model on the pertub images: 28.79%
+Epoch [35/100],Step [3125/3125],  Loss_2: 0.24296315163229265, pcc_1_new: -0.3143474582928625, pcc_2: 0.548055225226363, dis_1_new: 0.2623556217197245, dis_2: 0.8892512321472168
+Test Accuracy of the model on the test images: 48.43%
+Test Accuracy of the model on the pertub images: 29.49%
+Epoch [36/100],Step [3125/3125],  Loss_2: 0.2422428702789478, pcc_1_new: -0.32363737566971645, pcc_2: 0.5825747506580862, dis_1_new: 0.2458667358081106, dis_2: 0.8928996324539185
+Test Accuracy of the model on the test images: 49.46%
+Test Accuracy of the model on the pertub images: 27.3%
+Epoch [37/100],Step [3125/3125],  Loss_2: 0.2427766689811475, pcc_1_new: -0.36423186175383987, pcc_2: 0.3984520782463197, dis_1_new: 0.23262670434250687, dis_2: 0.8490233421325684
+Test Accuracy of the model on the test images: 47.599999999999994%
+Test Accuracy of the model on the pertub images: 25.96%
+Epoch [38/100],Step [3125/3125],  Loss_2: 0.24227888798870673, pcc_1_new: -0.34150066102657795, pcc_2: 0.525119321747544, dis_1_new: 0.2500467264499846, dis_2: 0.87628173828125
+Test Accuracy of the model on the test images: 47.199999999999996%
+Test Accuracy of the model on the pertub images: 28.77%
+Epoch [39/100],Step [3125/3125],  Loss_2: 0.24230497417911126, pcc_1_new: -0.3621564280718112, pcc_2: 0.5503802537496615, dis_1_new: 0.22839569552400552, dis_2: 0.8768942952156067
+Test Accuracy of the model on the test images: 52.2%
+Test Accuracy of the model on the pertub images: 27.08%
+Epoch [40/100],Step [3125/3125],  Loss_2: 0.24225725449367153, pcc_1_new: -0.3008594865427877, pcc_2: 0.5596216057877528, dis_1_new: 0.24117666201442825, dis_2: 0.8760762214660645
+Test Accuracy of the model on the test images: 51.790000000000006%
+Test Accuracy of the model on the pertub images: 26.840000000000003%
+Epoch [41/100],Step [3125/3125],  Loss_2: 0.24227391365929682, pcc_1_new: -0.3187221680423248, pcc_2: 0.5574432517860471, dis_1_new: 0.23952581658354272, dis_2: 0.8890841603279114
+Test Accuracy of the model on the test images: 47.010000000000005%
+Test Accuracy of the model on the pertub images: 29.189999999999998%
+Epoch [42/100],Step [3125/3125],  Loss_2: 0.24231820431787923, pcc_1_new: -0.3377396513678892, pcc_2: 0.5359091489929956, dis_1_new: 0.2497230243052879, dis_2: 0.8799095153808594
+Test Accuracy of the model on the test images: 49.46%
+Test Accuracy of the model on the pertub images: 27.35%
+Epoch [43/100],Step [3125/3125],  Loss_2: 0.24290582278425574, pcc_1_new: -0.33363898450977203, pcc_2: 0.5563019969508546, dis_1_new: 0.24410690320785847, dis_2: 0.885334312915802
+Test Accuracy of the model on the test images: 47.24%
+Test Accuracy of the model on the pertub images: 29.24%
+Epoch [44/100],Step [3125/3125],  Loss_2: 0.24278923935458965, pcc_1_new: -0.346475994551132, pcc_2: 0.6163561953050726, dis_1_new: 0.23619399375755454, dis_2: 0.8961544036865234
+Test Accuracy of the model on the test images: 48.809999999999995%
+Test Accuracy of the model on the pertub images: 27.79%
+Epoch [45/100],Step [3125/3125],  Loss_2: 0.24287993615783063, pcc_1_new: -0.3196345465327095, pcc_2: 0.4187539118795198, dis_1_new: 0.25178587497617083, dis_2: 0.8487437963485718
+Test Accuracy of the model on the test images: 49.6%
+Test Accuracy of the model on the pertub images: 26.36%
+Epoch [46/100],Step [3125/3125],  Loss_2: 0.24243591413820884, pcc_1_new: -0.34707062298312685, pcc_2: 0.5023394336943844, dis_1_new: 0.24946464894534087, dis_2: 0.8692909479141235
+Test Accuracy of the model on the test images: 46.160000000000004%
+Test Accuracy of the model on the pertub images: 28.439999999999998%
+Epoch [47/100],Step [3125/3125],  Loss_2: 0.24251072232653526, pcc_1_new: -0.33562039980999414, pcc_2: 0.5984236562480936, dis_1_new: 0.23725856257580474, dis_2: 0.8860377073287964
+Test Accuracy of the model on the test images: 50.42%
+Test Accuracy of the model on the pertub images: 29.110000000000003%
+Epoch [48/100],Step [3125/3125],  Loss_2: 0.24276857742225333, pcc_1_new: -0.31679742295380536, pcc_2: 0.6318225577753818, dis_1_new: 0.240437137891911, dis_2: 0.9142122268676758
+Test Accuracy of the model on the test images: 49.4%
+Test Accuracy of the model on the pertub images: 29.049999999999997%
+Epoch [49/100],Step [3125/3125],  Loss_2: 0.24270015170612463, pcc_1_new: -0.34379729998471986, pcc_2: 0.6094122691602273, dis_1_new: 0.22317465302664888, dis_2: 0.8916950225830078
+Test Accuracy of the model on the test images: 50.07%
+Test Accuracy of the model on the pertub images: 26.19%
+Epoch [50/100],Step [3125/3125],  Loss_1: 1.0069896567940713, pcc_1_new: -0.3572082570755606, pcc_2: 0.6735437814423466, dis_1_new: 0.23945343670847027, dis_2: 0.9010983109474182
+Epoch [50/100],Step [3125/3125],  Loss_2: 0.3196388385494184, pcc_1_new: -0.35715495844734957, pcc_2: 0.6732410553847118, dis_1_new: 0.23952498151390644, dis_2: 0.900975227355957
+Test Accuracy of the model on the test images: 58.43000000000001%
+Test Accuracy of the model on the pertub images: 44.690000000000005%
+Epoch [51/100],Step [3125/3125],  Loss_2: 0.32157611033595757, pcc_1_new: -0.3169055277919482, pcc_2: 0.7767735044240103, dis_1_new: 0.24368614983906067, dis_2: 0.9440962076187134
+Test Accuracy of the model on the test images: 60.95%
+Test Accuracy of the model on the pertub images: 55.16%
+Epoch [52/100],Step [3125/3125],  Loss_2: 0.3214314961653777, pcc_1_new: -0.34471343095222184, pcc_2: 0.7160753485888572, dis_1_new: 0.24236958944993187, dis_2: 0.9211747646331787
+Test Accuracy of the model on the test images: 60.129999999999995%
+Test Accuracy of the model on the pertub images: 54.47%
+Epoch [53/100],Step [3125/3125],  Loss_2: 0.3212558980692955, pcc_1_new: -0.3245985794723855, pcc_2: 0.741472883572132, dis_1_new: 0.24728487889223982, dis_2: 0.9334594011306763
+Test Accuracy of the model on the test images: 63.27%
+Test Accuracy of the model on the pertub images: 53.72%
+Epoch [54/100],Step [3125/3125],  Loss_2: 0.3210172909355399, pcc_1_new: -0.3690209540691356, pcc_2: 0.734505993356688, dis_1_new: 0.23026404809084444, dis_2: 0.9326467514038086
+Test Accuracy of the model on the test images: 62.94%
+Test Accuracy of the model on the pertub images: 48.99%
+Epoch [55/100],Step [3125/3125],  Loss_2: 0.3211151771186792, pcc_1_new: -0.31310876879883404, pcc_2: 0.6184525523670286, dis_1_new: 0.25630707533661246, dis_2: 0.890326976776123
+Test Accuracy of the model on the test images: 58.85%
+Test Accuracy of the model on the pertub images: 53.16%
+Epoch [56/100],Step [3125/3125],  Loss_2: 0.32102940160643884, pcc_1_new: -0.3341204140835016, pcc_2: 0.6461550461881779, dis_1_new: 0.24797271118458059, dis_2: 0.9057536125183105
+Test Accuracy of the model on the test images: 59.39%
+Test Accuracy of the model on the pertub images: 51.49%
+Epoch [57/100],Step [3125/3125],  Loss_2: 0.32109984001331227, pcc_1_new: -0.3352411995924205, pcc_2: 0.5820255411283706, dis_1_new: 0.24815068146038155, dis_2: 0.8856789469718933
+Test Accuracy of the model on the test images: 59.309999999999995%
+Test Accuracy of the model on the pertub images: 53.89000000000001%
+Epoch [58/100],Step [3125/3125],  Loss_2: 0.32133831259196355, pcc_1_new: -0.3222926165846312, pcc_2: 0.6068330916264812, dis_1_new: 0.25256835017998025, dis_2: 0.8946653604507446
+Test Accuracy of the model on the test images: 63.029999999999994%
+Test Accuracy of the model on the pertub images: 52.370000000000005%
+Epoch [59/100],Step [3125/3125],  Loss_2: 0.3209775833595967, pcc_1_new: -0.3499886138327791, pcc_2: 0.5756903021155555, dis_1_new: 0.24938238534071577, dis_2: 0.8820511102676392
+Test Accuracy of the model on the test images: 62.980000000000004%
+Test Accuracy of the model on the pertub images: 48.93%
+Epoch [60/100],Step [3125/3125],  Loss_1: 0.6649281039452553, pcc_1_new: -0.345759547854663, pcc_2: 0.5964891523619258, dis_1_new: 0.24520380435906125, dis_2: 0.8874491453170776
+Epoch [60/100],Step [3125/3125],  Loss_2: 0.31716258790814644, pcc_1_new: -0.34571003390773297, pcc_2: 0.5962862543026574, dis_1_new: 0.24524442315402914, dis_2: 0.8873780369758606
+Test Accuracy of the model on the test images: 58.64%
+Test Accuracy of the model on the pertub images: 59.69%
+Epoch [61/100],Step [3125/3125],  Loss_2: 0.3136182334311786, pcc_1_new: -0.35150479615922675, pcc_2: 0.7060458488991737, dis_1_new: 0.23292451634282857, dis_2: 0.9181866645812988
+Test Accuracy of the model on the test images: 58.720000000000006%
+Test Accuracy of the model on the pertub images: 53.900000000000006%
+Epoch [62/100],Step [3125/3125],  Loss_2: 0.31371134445412513, pcc_1_new: -0.3270623999682376, pcc_2: 0.6393377636686665, dis_1_new: 0.25413324284337535, dis_2: 0.9115715622901917
+Test Accuracy of the model on the test images: 59.58%
+Test Accuracy of the model on the pertub images: 51.04%
+Epoch [63/100],Step [3125/3125],  Loss_2: 0.31365656777079326, pcc_1_new: -0.3350894626917629, pcc_2: 0.6735220946660948, dis_1_new: 0.233549957491494, dis_2: 0.9133836627006531
+Test Accuracy of the model on the test images: 61.44%
+Test Accuracy of the model on the pertub images: 51.09%
+Epoch [64/100],Step [3125/3125],  Loss_2: 0.31388951062731046, pcc_1_new: -0.33653115585315335, pcc_2: 0.7244314190516024, dis_1_new: 0.24137514705706956, dis_2: 0.9272667765617371
+Test Accuracy of the model on the test images: 60.629999999999995%
+Test Accuracy of the model on the pertub images: 51.6%
+Epoch [65/100],Step [3125/3125],  Loss_2: 0.31338515333759936, pcc_1_new: -0.3331244717173086, pcc_2: 0.7564609596634573, dis_1_new: 0.2410422267654902, dis_2: 0.9324702620506287
+Test Accuracy of the model on the test images: 57.82000000000001%
+Test Accuracy of the model on the pertub images: 56.03%
+Epoch [66/100],Step [3125/3125],  Loss_2: 0.31382979183707616, pcc_1_new: -0.34398786870542747, pcc_2: 0.6549798888406535, dis_1_new: 0.23832314829980786, dis_2: 0.9084513783454895
+Test Accuracy of the model on the test images: 60.67%
+Test Accuracy of the model on the pertub images: 50.32%
+Epoch [67/100],Step [3125/3125],  Loss_2: 0.3134889040147728, pcc_1_new: -0.35770797331768517, pcc_2: 0.6756070220640493, dis_1_new: 0.22961947913179104, dis_2: 0.9171658754348755
+Test Accuracy of the model on the test images: 58.379999999999995%
+Test Accuracy of the model on the pertub images: 50.22%
+Epoch [68/100],Step [3125/3125],  Loss_2: 0.3135836609558787, pcc_1_new: -0.35315778893684346, pcc_2: 0.7109755851428778, dis_1_new: 0.23827160291399585, dis_2: 0.9181976318359375
+Test Accuracy of the model on the test images: 60.19%
+Test Accuracy of the model on the pertub images: 53.559999999999995%
+Epoch [69/100],Step [3125/3125],  Loss_2: 0.3135170245410817, pcc_1_new: -0.3747855518143486, pcc_2: 0.7577728897729907, dis_1_new: 0.2367333549405949, dis_2: 0.9405642747879028
+Test Accuracy of the model on the test images: 61.260000000000005%
+Test Accuracy of the model on the pertub images: 48.53%
+Epoch [70/100],Step [3125/3125],  Loss_1: 0.5202126046460867, pcc_1_new: -0.2921769552237798, pcc_2: 0.6259387700969815, dis_1_new: 0.27423066782978084, dis_2: 0.9025112390518188
+Epoch [70/100],Step [3125/3125],  Loss_2: 0.30668577743676795, pcc_1_new: -0.2922689133763126, pcc_2: 0.6261100047055626, dis_1_new: 0.27418272767325025, dis_2: 0.9025189876556396
+Test Accuracy of the model on the test images: 62.55%
+Test Accuracy of the model on the pertub images: 46.75%
+Epoch [71/100],Step [3125/3125],  Loss_2: 0.30780073614821596, pcc_1_new: -0.3592397412012652, pcc_2: 0.7136221419800668, dis_1_new: 0.22886867224947954, dis_2: 0.9184479117393494
+Test Accuracy of the model on the test images: 64.82%
+Test Accuracy of the model on the pertub images: 45.83%
+Epoch [72/100],Step [3125/3125],  Loss_2: 0.30783267855678165, pcc_1_new: -0.35543724142001654, pcc_2: 0.7225363943557928, dis_1_new: 0.2422404560117875, dis_2: 0.9235340356826782
+Test Accuracy of the model on the test images: 63.54%
+Test Accuracy of the model on the pertub images: 45.23%
+Epoch [73/100],Step [3125/3125],  Loss_2: 0.30767587004384417, pcc_1_new: -0.35027993873206303, pcc_2: 0.6778081689503823, dis_1_new: 0.23954333419365184, dis_2: 0.9115273356437683
+Test Accuracy of the model on the test images: 64.58%
+Test Accuracy of the model on the pertub images: 53.02%
+Epoch [74/100],Step [3125/3125],  Loss_2: 0.30751139607223493, pcc_1_new: -0.3541980396259773, pcc_2: 0.609658341757579, dis_1_new: 0.23454760056628307, dis_2: 0.8929349780082703
+Test Accuracy of the model on the test images: 63.190000000000005%
+Test Accuracy of the model on the pertub images: 50.6%
+Epoch [75/100],Step [3125/3125],  Loss_2: 0.3077739084042452, pcc_1_new: -0.33226722075016263, pcc_2: 0.6498369083479709, dis_1_new: 0.2492172562044228, dis_2: 0.8991056680679321
+Test Accuracy of the model on the test images: 64.3%
+Test Accuracy of the model on the pertub images: 47.339999999999996%
+Epoch [76/100],Step [3125/3125],  Loss_2: 0.30769553468853694, pcc_1_new: -0.3694460882368998, pcc_2: 0.6808001260285049, dis_1_new: 0.22188963467558032, dis_2: 0.9137279987335205
+Test Accuracy of the model on the test images: 65.41%
+Test Accuracy of the model on the pertub images: 48.309999999999995%
+Epoch [77/100],Step [3125/3125],  Loss_2: 0.3079795565246962, pcc_1_new: -0.3247677834716928, pcc_2: 0.6885651056596733, dis_1_new: 0.2457777364142087, dis_2: 0.9082437753677368
+Test Accuracy of the model on the test images: 65.3%
+Test Accuracy of the model on the pertub images: 45.43%
+Epoch [78/100],Step [3125/3125],  Loss_2: 0.30774977229129663, pcc_1_new: -0.3548693711753349, pcc_2: 0.6279387585622799, dis_1_new: 0.24333401802131838, dis_2: 0.9032765030860901
+Test Accuracy of the model on the test images: 62.78%
+Test Accuracy of the model on the pertub images: 47.93%
+Epoch [79/100],Step [3125/3125],  Loss_2: 0.3077595495134353, pcc_1_new: -0.32820998254373435, pcc_2: 0.6709533478718139, dis_1_new: 0.24271517423476377, dis_2: 0.9132946729660034
+Test Accuracy of the model on the test images: 63.9%
+Test Accuracy of the model on the pertub images: 53.300000000000004%
+Epoch [80/100],Step [3125/3125],  Loss_1: 0.4023651578718424, pcc_1_new: -0.3454401425354864, pcc_2: 0.6268302230976611, dis_1_new: 0.23404714720470338, dis_2: 0.90370774269104
+Epoch [80/100],Step [3125/3125],  Loss_2: 0.30581228746136613, pcc_1_new: -0.3452842528342465, pcc_2: 0.6264963174095427, dis_1_new: 0.23409414970312475, dis_2: 0.9036209583282471
+Test Accuracy of the model on the test images: 65.52%
+Test Accuracy of the model on the pertub images: 44.81%
+Epoch [81/100],Step [3125/3125],  Loss_2: 0.30021168886650884, pcc_1_new: -0.34410178235776984, pcc_2: 0.6227431925556545, dis_1_new: 0.23716692831813113, dis_2: 0.8969640731811523
+Test Accuracy of the model on the test images: 65.83%
+Test Accuracy of the model on the pertub images: 46.12%
+Epoch [82/100],Step [3125/3125],  Loss_2: 0.3000689342204082, pcc_1_new: -0.3370192108056534, pcc_2: 0.6684390349944734, dis_1_new: 0.24611242725414487, dis_2: 0.9109119772911072
+Test Accuracy of the model on the test images: 65.4%
+Test Accuracy of the model on the pertub images: 49.980000000000004%
+Epoch [83/100],Step [3125/3125],  Loss_2: 0.3002267914774085, pcc_1_new: -0.3597900425113408, pcc_2: 0.7294899701645517, dis_1_new: 0.2317486258604211, dis_2: 0.9353457689285278
+Test Accuracy of the model on the test images: 66.66%
+Test Accuracy of the model on the pertub images: 45.85%
+Epoch [84/100],Step [3125/3125],  Loss_2: 0.30036400173304223, pcc_1_new: -0.35615731733995226, pcc_2: 0.6394319452884515, dis_1_new: 0.22943852083241414, dis_2: 0.8907740116119385
+Test Accuracy of the model on the test images: 65.09%
+Test Accuracy of the model on the pertub images: 49.980000000000004%
+Epoch [85/100],Step [3125/3125],  Loss_2: 0.3006213220805231, pcc_1_new: -0.367036015104829, pcc_2: 0.6662471141770254, dis_1_new: 0.24325487433976872, dis_2: 0.910607099533081
+Test Accuracy of the model on the test images: 63.85999999999999%
+Test Accuracy of the model on the pertub images: 50.42%
+Epoch [86/100],Step [3125/3125],  Loss_2: 0.30039001296354595, pcc_1_new: -0.3787822254103492, pcc_2: 0.5968764049078359, dis_1_new: 0.2394315531621975, dis_2: 0.8873433470726013
+Test Accuracy of the model on the test images: 64.01%
+Test Accuracy of the model on the pertub images: 52.49%
+Epoch [87/100],Step [3125/3125],  Loss_2: 0.3005231982618704, pcc_1_new: -0.31489990113657934, pcc_2: 0.705816822670424, dis_1_new: 0.24359285473444633, dis_2: 0.9166672229766846
+Test Accuracy of the model on the test images: 65.97%
+Test Accuracy of the model on the pertub images: 50.19%
+Epoch [88/100],Step [3125/3125],  Loss_2: 0.30070848814754425, pcc_1_new: -0.3388024400826194, pcc_2: 0.6864231196231754, dis_1_new: 0.2567466489180192, dis_2: 0.9192629456520081
+Test Accuracy of the model on the test images: 64.1%
+Test Accuracy of the model on the pertub images: 47.23%
+Epoch [89/100],Step [3125/3125],  Loss_2: 0.30049299035748595, pcc_1_new: -0.30482139717368584, pcc_2: 0.5644341432318295, dis_1_new: 0.2571407303232537, dis_2: 0.8916009664535522
+Test Accuracy of the model on the test images: 64.99000000000001%
+Test Accuracy of the model on the pertub images: 48.67%
+Epoch [90/100],Step [3125/3125],  Loss_1: 0.3120155541723967, pcc_1_new: -0.3254361268971352, pcc_2: 0.6696918326820855, dis_1_new: 0.24260993021626556, dis_2: 0.9164714217185974
+Epoch [90/100],Step [3125/3125],  Loss_2: 0.2993736880517002, pcc_1_new: -0.32548272881360546, pcc_2: 0.6698283053967192, dis_1_new: 0.24260542817256608, dis_2: 0.916466236114502
+Test Accuracy of the model on the test images: 62.81%
+Test Accuracy of the model on the pertub images: 51.49%
+Epoch [91/100],Step [3125/3125],  Loss_2: 0.29689430361792535, pcc_1_new: -0.3428874138415613, pcc_2: 0.6236022867784454, dis_1_new: 0.24645081807636277, dis_2: 0.8993592262268066
+Test Accuracy of the model on the test images: 61.199999999999996%
+Test Accuracy of the model on the pertub images: 55.60000000000001%
+Epoch [92/100],Step [3125/3125],  Loss_2: 0.2972498997496354, pcc_1_new: -0.32958799651279813, pcc_2: 0.5672709700128298, dis_1_new: 0.2343337633134294, dis_2: 0.8813053369522095
+Test Accuracy of the model on the test images: 62.86000000000001%
+Test Accuracy of the model on the pertub images: 55.81%
+Epoch [93/100],Step [3125/3125],  Loss_2: 0.2969775961446335, pcc_1_new: -0.33948191780869436, pcc_2: 0.7572401040900527, dis_1_new: 0.2328908420848979, dis_2: 0.9390363693237305
+Test Accuracy of the model on the test images: 57.06%
+Test Accuracy of the model on the pertub images: 57.54%
+Epoch [94/100],Step [3125/3125],  Loss_2: 0.2970932709915705, pcc_1_new: -0.3231939824089134, pcc_2: 0.6402557244262168, dis_1_new: 0.23865950163017557, dis_2: 0.9021841287612915
+Test Accuracy of the model on the test images: 60.89%
+Test Accuracy of the model on the pertub images: 53.06999999999999%
+Epoch [95/100],Step [3125/3125],  Loss_2: 0.29683275947686283, pcc_1_new: -0.3478915827158864, pcc_2: 0.6804336097778682, dis_1_new: 0.22401471981245435, dis_2: 0.9107482433319092
+Test Accuracy of the model on the test images: 63.480000000000004%
+Test Accuracy of the model on the pertub images: 55.989999999999995%
+Epoch [96/100],Step [3125/3125],  Loss_2: 0.29717709476558013, pcc_1_new: -0.3388126707728835, pcc_2: 0.6621433187135176, dis_1_new: 0.23647386424820976, dis_2: 0.9189010858535767
+Test Accuracy of the model on the test images: 59.99%
+Test Accuracy of the model on the pertub images: 53.75%
+Epoch [97/100],Step [3125/3125],  Loss_2: 0.29724328579014475, pcc_1_new: -0.3303220437439747, pcc_2: 0.6492935004363307, dis_1_new: 0.25259139412155285, dis_2: 0.9062566757202148
+Test Accuracy of the model on the test images: 61.7%
+Test Accuracy of the model on the pertub images: 56.97%
+Epoch [98/100],Step [3125/3125],  Loss_2: 0.29703966002716253, pcc_1_new: -0.3237463250921112, pcc_2: 0.6039333603926231, dis_1_new: 0.2384899617483751, dis_2: 0.8889326453208923
+Test Accuracy of the model on the test images: 64.1%
+Test Accuracy of the model on the pertub images: 55.34%
+Epoch [99/100],Step [3125/3125],  Loss_2: 0.29720609232888506, pcc_1_new: -0.32822428050594016, pcc_2: 0.6392176767320622, dis_1_new: 0.24297275792176976, dis_2: 0.9032069444656372
+Test Accuracy of the model on the test images: 63.260000000000005%
+Test Accuracy of the model on the pertub images: 54.11%
+Epoch [100/100],Step [3125/3125],  Loss_1: 0.23371472152292727, pcc_1_new: -0.32369894040615615, pcc_2: 0.6785191268771983, dis_1_new: 0.24900030197194392, dis_2: 0.9142324924468994
+Epoch [100/100],Step [3125/3125],  Loss_2: 0.29701988880722785, pcc_1_new: -0.32362568944673203, pcc_2: 0.6782645827539109, dis_1_new: 0.24903920080112285, dis_2: 0.9141267538070679
+Test Accuracy of the model on the test images: 66.53999999999999%
+Test Accuracy of the model on the pertub images: 53.900000000000006%
+(backdoor) root@3716f85f442e:~/Heqs# python draft_v11_1.py 
+Epoch [1/100],Step [3125/3125],  Loss_2: -0.29688786190780964, pcc_1_new: -0.33024575534994677, pcc_2: 0.6291874027967834, dis_1_new: 0.23995992757685158, dis_2: 0.9083263874053955
+Test Accuracy of the model on the test images: 50.23%
+Test Accuracy of the model on the pertub images: 28.92%
+Epoch [2/100],Step [3125/3125],  Loss_2: -0.29654393048136524, pcc_1_new: -0.3206959898375883, pcc_2: 0.6125944534695783, dis_1_new: 0.24199267952609402, dis_2: 0.8943899869918823
+Test Accuracy of the model on the test images: 49.46%
+Test Accuracy of the model on the pertub images: 28.27%
+Epoch [3/100],Step [3125/3125],  Loss_2: -0.29658125479494385, pcc_1_new: -0.30492876067884717, pcc_2: 0.5396889746103217, dis_1_new: 0.2529915097728645, dis_2: 0.8842354416847229
+Test Accuracy of the model on the test images: 47.25%
+Test Accuracy of the model on the pertub images: 27.21%
+Epoch [4/100],Step [3125/3125],  Loss_2: -0.2971933930163829, pcc_1_new: -0.3389004136094558, pcc_2: 0.5551454012807946, dis_1_new: 0.2366873320929409, dis_2: 0.8664612770080566
+Test Accuracy of the model on the test images: 48.83%
+Test Accuracy of the model on the pertub images: 28.59%
+Epoch [5/100],Step [3125/3125],  Loss_2: -0.2973311820929033, pcc_1_new: -0.32737660192943363, pcc_2: 0.6467175478121602, dis_1_new: 0.24075278182230603, dis_2: 0.911203145980835
+Test Accuracy of the model on the test images: 48.370000000000005%
+Test Accuracy of the model on the pertub images: 28.4%
+Epoch [6/100],Step [3125/3125],  Loss_2: -0.29719023850614024, pcc_1_new: -0.36269479287685036, pcc_2: 0.6040676736858495, dis_1_new: 0.23310210109371765, dis_2: 0.89537513256073
+Test Accuracy of the model on the test images: 47.81%
+Test Accuracy of the model on the pertub images: 25.779999999999998%
+Epoch [7/100],Step [3125/3125],  Loss_2: -0.29694974521068807, pcc_1_new: -0.311800447870969, pcc_2: 0.6788030795559982, dis_1_new: 0.24342477630751463, dis_2: 0.9094474911689758
+Test Accuracy of the model on the test images: 50.39%
+Test Accuracy of the model on the pertub images: 29.67%
+Epoch [8/100],Step [3125/3125],  Loss_2: -0.2971661438010467, pcc_1_new: -0.3187478944077379, pcc_2: 0.5724177595561166, dis_1_new: 0.255685392715386, dis_2: 0.8873902559280396
+Test Accuracy of the model on the test images: 49.94%
+Test Accuracy of the model on the pertub images: 24.18%
+Epoch [9/100],Step [3125/3125],  Loss_2: -0.29732514235598123, pcc_1_new: -0.3483416114349519, pcc_2: 0.5431987902512562, dis_1_new: 0.24455200892949647, dis_2: 0.8739156723022461
+Test Accuracy of the model on the test images: 50.72%
+Test Accuracy of the model on the pertub images: 28.15%
+Epoch [10/100],Step [3125/3125],  Loss_2: -0.29695807521986894, pcc_1_new: -0.30764175809224936, pcc_2: 0.6199182811029047, dis_1_new: 0.25603604498125077, dis_2: 0.902457594871521
+Test Accuracy of the model on the test images: 50.42%
+Test Accuracy of the model on the pertub images: 27.279999999999998%
+Epoch [11/100],Step [3125/3125],  Loss_2: -0.29710133622781615, pcc_1_new: -0.34026758293623466, pcc_2: 0.5503601334488807, dis_1_new: 0.24755799019275576, dis_2: 0.8812404870986938
+Test Accuracy of the model on the test images: 49.2%
+Test Accuracy of the model on the pertub images: 26.179999999999996%
+Epoch [12/100],Step [3125/3125],  Loss_2: -0.2973762393064532, pcc_1_new: -0.3118308164808945, pcc_2: 0.6752335148738697, dis_1_new: 0.2553895859500509, dis_2: 0.9177423715591431
+Test Accuracy of the model on the test images: 50.760000000000005%
+Test Accuracy of the model on the pertub images: 27.85%
+Epoch [13/100],Step [3125/3125],  Loss_2: -0.29742552384975623, pcc_1_new: -0.35901293071827944, pcc_2: 0.6918884111619277, dis_1_new: 0.23638048759972397, dis_2: 0.9245868921279907
+Test Accuracy of the model on the test images: 47.589999999999996%
+Test Accuracy of the model on the pertub images: 28.18%
+Epoch [14/100],Step [3125/3125],  Loss_2: -0.2965924249524012, pcc_1_new: -0.3711282994055469, pcc_2: 0.6610472195368003, dis_1_new: 0.2464201119362154, dis_2: 0.9098153710365295
+Test Accuracy of the model on the test images: 50.03999999999999%
+Test Accuracy of the model on the pertub images: 26.91%
+Epoch [15/100],Step [3125/3125],  Loss_2: -0.29695601672983, pcc_1_new: -0.3320924729209291, pcc_2: 0.6965295020443237, dis_1_new: 0.2329654222840679, dis_2: 0.9216994643211365
+Test Accuracy of the model on the test images: 51.019999999999996%
+Test Accuracy of the model on the pertub images: 28.71%
+Epoch [16/100],Step [3125/3125],  Loss_2: -0.2970209093622604, pcc_1_new: -0.3331167965846057, pcc_2: 0.6592961590573164, dis_1_new: 0.23203350468478331, dis_2: 0.9119147062301636
+Test Accuracy of the model on the test images: 47.22%
+Test Accuracy of the model on the pertub images: 25.650000000000002%
+Epoch [17/100],Step [3125/3125],  Loss_2: -0.29701149243698177, pcc_1_new: -0.34362725596183663, pcc_2: 0.661877948329981, dis_1_new: 0.2387861191900037, dis_2: 0.912911593914032
+Test Accuracy of the model on the test images: 50.77%
+Test Accuracy of the model on the pertub images: 26.779999999999998%
+Epoch [18/100],Step [3125/3125],  Loss_2: -0.29671410682238, pcc_1_new: -0.33410457005215377, pcc_2: 0.6638806528061469, dis_1_new: 0.25349068977678363, dis_2: 0.9128305315971375
+Test Accuracy of the model on the test images: 50.3%
+Test Accuracy of the model on the pertub images: 28.33%
+Epoch [19/100],Step [3125/3125],  Loss_2: -0.29743068218076396, pcc_1_new: -0.32307218129378057, pcc_2: 0.7027579853075308, dis_1_new: 0.2639371151776494, dis_2: 0.9219256639480591
+Test Accuracy of the model on the test images: 48.0%
+Test Accuracy of the model on the pertub images: 26.150000000000002%
+Epoch [20/100],Step [3125/3125],  Loss_2: -0.2971749469619961, pcc_1_new: -0.34601520929738194, pcc_2: 0.6465135323960597, dis_1_new: 0.24636076078713215, dis_2: 0.9075686931610107
+Test Accuracy of the model on the test images: 50.14999999999999%
+Test Accuracy of the model on the pertub images: 29.81%
+Epoch [21/100],Step [3125/3125],  Loss_2: -0.2971449107026509, pcc_1_new: -0.3173520548889316, pcc_2: 0.6583806424510963, dis_1_new: 0.25406741922889337, dis_2: 0.9052498936653137
+Test Accuracy of the model on the test images: 51.65%
+Test Accuracy of the model on the pertub images: 29.34%
+Epoch [22/100],Step [3125/3125],  Loss_2: -0.29742448655579495, pcc_1_new: -0.3438182214388024, pcc_2: 0.6529458813365939, dis_1_new: 0.23326923790649712, dis_2: 0.9182460308074951
+Test Accuracy of the model on the test images: 48.03%
+Test Accuracy of the model on the pertub images: 28.68%
+Epoch [23/100],Step [3125/3125],  Loss_2: -0.297243720493573, pcc_1_new: -0.36133454633443945, pcc_2: 0.6946387490609714, dis_1_new: 0.22368001314067001, dis_2: 0.9200809001922607
+Test Accuracy of the model on the test images: 45.89%
+Test Accuracy of the model on the pertub images: 26.3%
+Epoch [24/100],Step [3125/3125],  Loss_2: -0.29715490542001854, pcc_1_new: -0.351850432006195, pcc_2: 0.5241161663176918, dis_1_new: 0.23699622657348685, dis_2: 0.8767478466033936
+Test Accuracy of the model on the test images: 49.11%
+Test Accuracy of the model on the pertub images: 26.35%
+Epoch [25/100],Step [3125/3125],  Loss_2: -0.29702318468984723, pcc_1_new: -0.31931539490591143, pcc_2: 0.705168349538548, dis_1_new: 0.24586936710060903, dis_2: 0.9311994910240173
+Test Accuracy of the model on the test images: 49.059999999999995%
+Test Accuracy of the model on the pertub images: 29.24%
+Epoch [26/100],Step [3125/3125],  Loss_2: -0.2970021407477159, pcc_1_new: -0.33421404792606235, pcc_2: 0.6720603607923042, dis_1_new: 0.24668822579001226, dis_2: 0.9131651520729065
+Test Accuracy of the model on the test images: 48.25%
+Test Accuracy of the model on the pertub images: 27.47%
+Epoch [27/100],Step [3125/3125],  Loss_2: -0.2965741381165719, pcc_1_new: -0.30570846105356686, pcc_2: 0.5452481085329901, dis_1_new: 0.2556232579951048, dis_2: 0.8781107664108276
+Test Accuracy of the model on the test images: 50.68%
+Test Accuracy of the model on the pertub images: 27.82%
+Epoch [28/100],Step [3125/3125],  Loss_2: -0.29696311753089927, pcc_1_new: -0.3363549257983808, pcc_2: 0.6447527259574757, dis_1_new: 0.23822604085067517, dis_2: 0.9038815498352051
+Test Accuracy of the model on the test images: 48.96%
+Test Accuracy of the model on the pertub images: 28.68%
+Epoch [29/100],Step [3125/3125],  Loss_2: -0.29703884741595765, pcc_1_new: -0.3196748338099559, pcc_2: 0.6263189021759799, dis_1_new: 0.2351286198091598, dis_2: 0.9034820199012756
+Test Accuracy of the model on the test images: 46.989999999999995%
+Test Accuracy of the model on the pertub images: 27.79%
+Epoch [30/100],Step [3125/3125],  Loss_2: -0.296744217945764, pcc_1_new: -0.3499285784390117, pcc_2: 0.4776861276478673, dis_1_new: 0.2344871753100231, dis_2: 0.8650237321853638
+Test Accuracy of the model on the test images: 50.42%
+Test Accuracy of the model on the pertub images: 30.18%
+Epoch [31/100],Step [3125/3125],  Loss_2: -0.2967042441870865, pcc_1_new: -0.34211993031148896, pcc_2: 0.6702407241314193, dis_1_new: 0.24261609064597, dis_2: 0.9163945913314819
+Test Accuracy of the model on the test images: 47.910000000000004%
+Test Accuracy of the model on the pertub images: 24.39%
+Epoch [32/100],Step [3125/3125],  Loss_2: -0.29669094418931385, pcc_1_new: -0.3342220960224695, pcc_2: 0.5254581585280891, dis_1_new: 0.23986424751249488, dis_2: 0.8673273324966431
+Test Accuracy of the model on the test images: 49.519999999999996%
+Test Accuracy of the model on the pertub images: 25.15%
+Epoch [33/100],Step [3125/3125],  Loss_2: -0.29724500941717413, pcc_1_new: -0.3494713643757281, pcc_2: 0.6922337886924411, dis_1_new: 0.24190048986517512, dis_2: 0.9107608795166016
+Test Accuracy of the model on the test images: 48.74%
+Test Accuracy of the model on the pertub images: 27.11%
+Epoch [34/100],Step [3125/3125],  Loss_2: -0.2971505917559259, pcc_1_new: -0.3623297055528926, pcc_2: 0.5961983552510829, dis_1_new: 0.24192077266171796, dis_2: 0.8932238817214966
+Test Accuracy of the model on the test images: 46.19%
+Test Accuracy of the model on the pertub images: 26.400000000000002%
+Epoch [35/100],Step [3125/3125],  Loss_2: -0.29688444090442817, pcc_1_new: -0.3225561072295483, pcc_2: 0.49645630011271435, dis_1_new: 0.2549602135583477, dis_2: 0.8634178638458252
+Test Accuracy of the model on the test images: 52.459999999999994%
+Test Accuracy of the model on the pertub images: 26.14%
+Epoch [36/100],Step [3125/3125],  Loss_2: -0.29734664760844964, pcc_1_new: -0.3430585441338265, pcc_2: 0.6183670480255903, dis_1_new: 0.24115486228420305, dis_2: 0.9027315974235535
+Test Accuracy of the model on the test images: 47.56%
+Test Accuracy of the model on the pertub images: 27.46%
+Epoch [37/100],Step [3125/3125],  Loss_2: -0.29709339025875275, pcc_1_new: -0.3632408976437592, pcc_2: 0.6585861217569933, dis_1_new: 0.226939075432831, dis_2: 0.9065203666687012
+Test Accuracy of the model on the test images: 48.02%
+Test Accuracy of the model on the pertub images: 25.28%
+Epoch [38/100],Step [3125/3125],  Loss_2: -0.29682013826164594, pcc_1_new: -0.3090998009997976, pcc_2: 0.5635823717045203, dis_1_new: 0.26301445107573895, dis_2: 0.8908393383026123
+Test Accuracy of the model on the test images: 51.44%
+Test Accuracy of the model on the pertub images: 25.240000000000002%
+Epoch [39/100],Step [3125/3125],  Loss_2: -0.29713394013702715, pcc_1_new: -0.3371884447535733, pcc_2: 0.6148894785976929, dis_1_new: 0.24861308785580602, dis_2: 0.8948164582252502
+Test Accuracy of the model on the test images: 50.660000000000004%
+Test Accuracy of the model on the pertub images: 28.54%
+Epoch [40/100],Step [3125/3125],  Loss_2: -0.296917046749177, pcc_1_new: -0.3404080588594932, pcc_2: 0.5361613881250348, dis_1_new: 0.2415065365580531, dis_2: 0.8878927230834961
+Test Accuracy of the model on the test images: 49.26%
+Test Accuracy of the model on the pertub images: 28.310000000000002%
+Epoch [41/100],Step [3125/3125],  Loss_2: -0.29675434331034967, pcc_1_new: -0.3488174495165487, pcc_2: 0.6255593422070163, dis_1_new: 0.22991476781573048, dis_2: 0.9059982299804688
+Test Accuracy of the model on the test images: 49.66%
+Test Accuracy of the model on the pertub images: 27.79%
+Epoch [42/100],Step [3125/3125],  Loss_2: -0.29697037925293734, pcc_1_new: -0.34203546186771894, pcc_2: 0.5982532000368279, dis_1_new: 0.24146817336082782, dis_2: 0.8958097696304321
+Test Accuracy of the model on the test images: 51.080000000000005%
+Test Accuracy of the model on the pertub images: 28.79%
+Epoch [43/100],Step [3125/3125],  Loss_2: -0.2966339121559038, pcc_1_new: -0.31361525783276567, pcc_2: 0.661539256361762, dis_1_new: 0.2534172966729384, dis_2: 0.915026068687439
+Test Accuracy of the model on the test images: 50.09%
+Test Accuracy of the model on the pertub images: 26.200000000000003%
+Epoch [44/100],Step [3125/3125],  Loss_2: -0.2971389402145538, pcc_1_new: -0.3182974675755563, pcc_2: 0.7156182636315216, dis_1_new: 0.24241039330441372, dis_2: 0.9224475622177124
+Test Accuracy of the model on the test images: 53.410000000000004%
+Test Accuracy of the model on the pertub images: 29.59%
+Epoch [45/100],Step [3125/3125],  Loss_2: -0.29733809432613495, pcc_1_new: -0.3423109641653462, pcc_2: 0.5907456560499988, dis_1_new: 0.21868461361006086, dis_2: 0.8923344016075134
+Test Accuracy of the model on the test images: 51.35999999999999%
+Test Accuracy of the model on the pertub images: 30.759999999999998%
+Epoch [46/100],Step [3125/3125],  Loss_2: -0.2970332182702693, pcc_1_new: -0.34253722846894186, pcc_2: 0.641218783742951, dis_1_new: 0.23146497690749512, dis_2: 0.9097715616226196
+Test Accuracy of the model on the test images: 49.15%
+Test Accuracy of the model on the pertub images: 28.110000000000003%
+Epoch [47/100],Step [3125/3125],  Loss_2: -0.2969924422601924, pcc_1_new: -0.29535043802681843, pcc_2: 0.6245925163518435, dis_1_new: 0.26359149202868715, dis_2: 0.9018872976303101
+Test Accuracy of the model on the test images: 51.93%
+Test Accuracy of the model on the pertub images: 27.51%
+Epoch [48/100],Step [3125/3125],  Loss_2: -0.2971116350858664, pcc_1_new: -0.34450904251716497, pcc_2: 0.6609058954227384, dis_1_new: 0.22816419123466813, dis_2: 0.897384762763977
+Test Accuracy of the model on the test images: 51.01%
+Test Accuracy of the model on the pertub images: 27.76%
+Epoch [49/100],Step [3125/3125],  Loss_2: -0.29720979004626363, pcc_1_new: -0.32384039041869145, pcc_2: 0.7245620554143825, dis_1_new: 0.2458584404567226, dis_2: 0.9230318069458008
+Test Accuracy of the model on the test images: 48.83%
+Test Accuracy of the model on the pertub images: 29.439999999999998%
+Epoch [50/100],Step [3125/3125],  Loss_1: 0.9911907713460922, pcc_1_new: -0.3425933812501373, pcc_2: 0.6601851576563799, dis_1_new: 0.24592438632875913, dis_2: 0.9031934142112732
+Epoch [50/100],Step [3125/3125],  Loss_2: -0.3113556813475151, pcc_1_new: -0.34253180067088673, pcc_2: 0.659858522096268, dis_1_new: 0.24586886843065664, dis_2: 0.9031004905700684
+Test Accuracy of the model on the test images: 60.39%
+Test Accuracy of the model on the pertub images: 42.17%
+Epoch [51/100],Step [3125/3125],  Loss_2: -0.30754809466243593, pcc_1_new: -0.30993651449464443, pcc_2: 0.640538943563709, dis_1_new: 0.26034526690698745, dis_2: 0.9037969708442688
+Test Accuracy of the model on the test images: 61.760000000000005%
+Test Accuracy of the model on the pertub images: 36.68%
+Epoch [52/100],Step [3125/3125],  Loss_2: -0.30777506610810096, pcc_1_new: -0.35066041140482124, pcc_2: 0.6544560005821213, dis_1_new: 0.23519948935576007, dis_2: 0.9021540284156799
+Test Accuracy of the model on the test images: 59.150000000000006%
+Test Accuracy of the model on the pertub images: 40.88%
+Epoch [53/100],Step [3125/3125],  Loss_2: -0.30787533025826685, pcc_1_new: -0.3679741420640659, pcc_2: 0.703346118659877, dis_1_new: 0.22847960361057348, dis_2: 0.9262723326683044
+Test Accuracy of the model on the test images: 58.19%
+Test Accuracy of the model on the pertub images: 49.32%
+Epoch [54/100],Step [3125/3125],  Loss_2: -0.30791706063696145, pcc_1_new: -0.3453969262081441, pcc_2: 0.7732142052044582, dis_1_new: 0.24154271690389262, dis_2: 0.9361680150032043
+Test Accuracy of the model on the test images: 59.089999999999996%
+Test Accuracy of the model on the pertub images: 42.57%
+Epoch [55/100],Step [3125/3125],  Loss_2: -0.30789938694901287, pcc_1_new: -0.3041875803864156, pcc_2: 0.5455543957105441, dis_1_new: 0.25823949802638885, dis_2: 0.883434534072876
+Test Accuracy of the model on the test images: 60.86%
+Test Accuracy of the model on the pertub images: 42.83%
+Epoch [56/100],Step [3125/3125],  Loss_2: -0.30786065434687554, pcc_1_new: -0.3372359933264798, pcc_2: 0.6506706116251235, dis_1_new: 0.24414735922359204, dis_2: 0.9092057347297668
+Test Accuracy of the model on the test images: 61.96%
+Test Accuracy of the model on the pertub images: 45.019999999999996%
+Epoch [57/100],Step [3125/3125],  Loss_2: -0.30753085849075634, pcc_1_new: -0.31651210001386076, pcc_2: 0.6460066691776464, dis_1_new: 0.2504128272514873, dis_2: 0.9131200313568115
+Test Accuracy of the model on the test images: 62.629999999999995%
+Test Accuracy of the model on the pertub images: 47.67%
+Epoch [58/100],Step [3125/3125],  Loss_2: -0.3080946074368158, pcc_1_new: -0.3196997709012392, pcc_2: 0.5759486635018891, dis_1_new: 0.24966245109575996, dis_2: 0.8973242044448853
+Test Accuracy of the model on the test images: 60.440000000000005%
+Test Accuracy of the model on the pertub images: 39.24%
+Epoch [59/100],Step [3125/3125],  Loss_2: -0.30762124234051347, pcc_1_new: -0.34455347990273016, pcc_2: 0.711420730253513, dis_1_new: 0.239461522568841, dis_2: 0.9244168996810913
+Test Accuracy of the model on the test images: 62.470000000000006%
+Test Accuracy of the model on the pertub images: 42.32%
+Epoch [60/100],Step [3125/3125],  Loss_1: 0.6590069465446472, pcc_1_new: -0.3411072201645343, pcc_2: 0.611443100408625, dis_1_new: 0.2673598209181006, dis_2: 0.8991365432739258
+Epoch [60/100],Step [3125/3125],  Loss_2: -0.30370438895697044, pcc_1_new: -0.34097864183138493, pcc_2: 0.6113366913023335, dis_1_new: 0.26734189346089354, dis_2: 0.899077832698822
+Test Accuracy of the model on the test images: 60.68%
+Test Accuracy of the model on the pertub images: 48.339999999999996%
+Epoch [61/100],Step [3125/3125],  Loss_2: -0.2992044916395468, pcc_1_new: -0.3028077138014669, pcc_2: 0.6115365739047665, dis_1_new: 0.25251888570673975, dis_2: 0.8930919170379639
+Test Accuracy of the model on the test images: 61.79%
+Test Accuracy of the model on the pertub images: 47.65%
+Epoch [62/100],Step [3125/3125],  Loss_2: -0.2993290832567384, pcc_1_new: -0.31681040319625386, pcc_2: 0.6865441136169588, dis_1_new: 0.2557036014333071, dis_2: 0.9209562540054321
+Test Accuracy of the model on the test images: 60.88%
+Test Accuracy of the model on the pertub images: 46.96%
+Epoch [63/100],Step [3125/3125],  Loss_2: -0.2993240326601149, pcc_1_new: -0.33838498468670886, pcc_2: 0.6232472923687666, dis_1_new: 0.24028850863477264, dis_2: 0.9007430672645569
+Test Accuracy of the model on the test images: 58.940000000000005%
+Test Accuracy of the model on the pertub images: 50.39%
+Epoch [64/100],Step [3125/3125],  Loss_2: -0.2991920363315533, pcc_1_new: -0.3218849171810031, pcc_2: 0.6602815898042504, dis_1_new: 0.2578596079370813, dis_2: 0.9094031453132629
+Test Accuracy of the model on the test images: 61.78%
+Test Accuracy of the model on the pertub images: 49.51%
+Epoch [65/100],Step [3125/3125],  Loss_2: -0.2993927366661001, pcc_1_new: -0.32548297922815, pcc_2: 0.5729440333750836, dis_1_new: 0.25048030679359223, dis_2: 0.8866945505142212
+Test Accuracy of the model on the test images: 59.150000000000006%
+Test Accuracy of the model on the pertub images: 49.769999999999996%
+Epoch [66/100],Step [3125/3125],  Loss_2: -0.2997687277074733, pcc_1_new: -0.3599265402541011, pcc_2: 0.6084966646201783, dis_1_new: 0.23346213969976118, dis_2: 0.8911291360855103
+Test Accuracy of the model on the test images: 57.379999999999995%
+Test Accuracy of the model on the pertub images: 50.99%
+Epoch [67/100],Step [3125/3125],  Loss_2: -0.29972768915516956, pcc_1_new: -0.2844935631174908, pcc_2: 0.5286094780683279, dis_1_new: 0.27271742198903237, dis_2: 0.8734527826309204
+Test Accuracy of the model on the test images: 60.419999999999995%
+Test Accuracy of the model on the pertub images: 48.59%
+Epoch [68/100],Step [3125/3125],  Loss_2: -0.2995008271834118, pcc_1_new: -0.32847521349556075, pcc_2: 0.548450725379565, dis_1_new: 0.23981040517612187, dis_2: 0.8736249804496765
+Test Accuracy of the model on the test images: 60.39%
+Test Accuracy of the model on the pertub images: 47.23%
+Epoch [69/100],Step [3125/3125],  Loss_2: -0.2991977508301775, pcc_1_new: -0.32778532532022253, pcc_2: 0.5839749563394707, dis_1_new: 0.23131204391920232, dis_2: 0.8826653361320496
+Test Accuracy of the model on the test images: 59.95%
+Test Accuracy of the model on the pertub images: 45.07%
+Epoch [70/100],Step [3125/3125],  Loss_1: 0.5091556894642114, pcc_1_new: -0.3346397557342884, pcc_2: 0.5324544484892119, dis_1_new: 0.23063391776128186, dis_2: 0.8734785318374634
+Epoch [70/100],Step [3125/3125],  Loss_2: -0.29509249955227834, pcc_1_new: -0.3345767931238503, pcc_2: 0.5316459937395419, dis_1_new: 0.2306604851260175, dis_2: 0.8733112812042236
+Test Accuracy of the model on the test images: 66.31%
+Test Accuracy of the model on the pertub images: 45.57%
+Epoch [71/100],Step [3125/3125],  Loss_2: -0.2957423078755666, pcc_1_new: -0.34924650890074094, pcc_2: 0.712293905946067, dis_1_new: 0.22761762564005816, dis_2: 0.920319676399231
+Test Accuracy of the model on the test images: 65.89%
+Test Accuracy of the model on the pertub images: 45.48%
+Epoch [72/100],Step [3125/3125],  Loss_2: -0.2959474845898012, pcc_1_new: -0.3366201719316324, pcc_2: 0.6139040086391777, dis_1_new: 0.23586071488411664, dis_2: 0.890616774559021
+Test Accuracy of the model on the test images: 63.74999999999999%
+Test Accuracy of the model on the pertub images: 44.190000000000005%
+Epoch [73/100],Step [3125/3125],  Loss_2: -0.29576533793644044, pcc_1_new: -0.3283145563562927, pcc_2: 0.600369518374128, dis_1_new: 0.246253374655295, dis_2: 0.8953045606613159
+Test Accuracy of the model on the test images: 65.73%
+Test Accuracy of the model on the pertub images: 45.5%
+Epoch [74/100],Step [3125/3125],  Loss_2: -0.29557857592673825, pcc_1_new: -0.3389996099746231, pcc_2: 0.6439000671461947, dis_1_new: 0.24280244094558584, dis_2: 0.9098864793777466
+Test Accuracy of the model on the test images: 67.27%
+Test Accuracy of the model on the pertub images: 42.41%
+Epoch [75/100],Step [3125/3125],  Loss_2: -0.29582546352581324, pcc_1_new: -0.3172596132376509, pcc_2: 0.6265887713259674, dis_1_new: 0.26530085539470916, dis_2: 0.9029626846313477
+Test Accuracy of the model on the test images: 65.58%
+Test Accuracy of the model on the pertub images: 41.79%
+Epoch [76/100],Step [3125/3125],  Loss_2: -0.2958304054043395, pcc_1_new: -0.3330767727547269, pcc_2: 0.6339890155505161, dis_1_new: 0.23515467483466654, dis_2: 0.904228687286377
+Test Accuracy of the model on the test images: 62.419999999999995%
+Test Accuracy of the model on the pertub images: 46.94%
+Epoch [77/100],Step [3125/3125],  Loss_2: -0.2956967352490393, pcc_1_new: -0.3398146752171601, pcc_2: 0.6948474333121712, dis_1_new: 0.24069669221362222, dis_2: 0.9173737168312073
+Test Accuracy of the model on the test images: 66.63%
+Test Accuracy of the model on the pertub images: 42.84%
+Epoch [78/100],Step [3125/3125],  Loss_2: -0.29557757802622736, pcc_1_new: -0.32740768923653885, pcc_2: 0.6111380752411573, dis_1_new: 0.24239375478791242, dis_2: 0.8944857716560364
+Test Accuracy of the model on the test images: 65.02%
+Test Accuracy of the model on the pertub images: 46.339999999999996%
+Epoch [79/100],Step [3125/3125],  Loss_2: -0.29579424845040553, pcc_1_new: -0.3501848995705847, pcc_2: 0.6866183329548355, dis_1_new: 0.22641244214768502, dis_2: 0.9190859198570251
+Test Accuracy of the model on the test images: 64.2%
+Test Accuracy of the model on the pertub images: 43.919999999999995%
+Epoch [80/100],Step [3125/3125],  Loss_1: 0.39482768868088725, pcc_1_new: -0.34379733669059387, pcc_2: 0.7133962491793309, dis_1_new: 0.2254901646923215, dis_2: 0.91437828540802
+Epoch [80/100],Step [3125/3125],  Loss_2: -0.29150949805785387, pcc_1_new: -0.34389669732526235, pcc_2: 0.7134835784231668, dis_1_new: 0.2254052325052889, dis_2: 0.9144076108932495
+Test Accuracy of the model on the test images: 63.370000000000005%
+Test Accuracy of the model on the pertub images: 51.32%
+Epoch [81/100],Step [3125/3125],  Loss_2: -0.29089523041047755, pcc_1_new: -0.33494836891264546, pcc_2: 0.5794022597654549, dis_1_new: 0.24517293251049166, dis_2: 0.88711017370224
+Test Accuracy of the model on the test images: 64.56%
+Test Accuracy of the model on the pertub images: 47.42%
+Epoch [82/100],Step [3125/3125],  Loss_2: -0.2908248298632004, pcc_1_new: -0.34195833909647577, pcc_2: 0.6519334020578756, dis_1_new: 0.23627238851465723, dis_2: 0.904995322227478
+Test Accuracy of the model on the test images: 62.150000000000006%
+Test Accuracy of the model on the pertub images: 48.53%
+Epoch [83/100],Step [3125/3125],  Loss_2: -0.29088638310317944, pcc_1_new: -0.3630538291371755, pcc_2: 0.6418236420416245, dis_1_new: 0.2346170745822072, dis_2: 0.9018304944038391
+Test Accuracy of the model on the test images: 62.019999999999996%
+Test Accuracy of the model on the pertub images: 51.83%
+Epoch [84/100],Step [3125/3125],  Loss_2: -0.29072206335845124, pcc_1_new: -0.3185111295587133, pcc_2: 0.6619454175204433, dis_1_new: 0.25311478820348143, dis_2: 0.9049932956695557
+Test Accuracy of the model on the test images: 62.12%
+Test Accuracy of the model on the pertub images: 46.28%
+Epoch [85/100],Step [3125/3125],  Loss_2: -0.2910725278882966, pcc_1_new: -0.3255155097181259, pcc_2: 0.6170090597432712, dis_1_new: 0.25192422802086767, dis_2: 0.9026976823806763
+Test Accuracy of the model on the test images: 60.529999999999994%
+Test Accuracy of the model on the pertub images: 48.699999999999996%
+Epoch [86/100],Step [3125/3125],  Loss_2: -0.29131491439169577, pcc_1_new: -0.3439668009740781, pcc_2: 0.7012897702107667, dis_1_new: 0.23767105153022783, dis_2: 0.9147168397903442
+Test Accuracy of the model on the test images: 61.8%
+Test Accuracy of the model on the pertub images: 43.29%
+Epoch [87/100],Step [3125/3125],  Loss_2: -0.2907050325100318, pcc_1_new: -0.3518225969919426, pcc_2: 0.6134858935733931, dis_1_new: 0.23392655536924623, dis_2: 0.8989533185958862
+Test Accuracy of the model on the test images: 62.63999999999999%
+Test Accuracy of the model on the pertub images: 52.71%
+Epoch [88/100],Step [3125/3125],  Loss_2: -0.2905616986109187, pcc_1_new: -0.32189558434938403, pcc_2: 0.4904697440224583, dis_1_new: 0.2360817889865945, dis_2: 0.8553272485733032
+Test Accuracy of the model on the test images: 62.419999999999995%
+Test Accuracy of the model on the pertub images: 39.589999999999996%
+Epoch [89/100],Step [3125/3125],  Loss_2: -0.29118226071673015, pcc_1_new: -0.3368964590147421, pcc_2: 0.7595069034465933, dis_1_new: 0.23368945866079605, dis_2: 0.9352627396583557
+Test Accuracy of the model on the test images: 62.03999999999999%
+Test Accuracy of the model on the pertub images: 48.0%
+Epoch [90/100],Step [3125/3125],  Loss_1: 0.2974760259762406, pcc_1_new: -0.3208326598148058, pcc_2: 0.6462780916749675, dis_1_new: 0.24441115860835566, dis_2: 0.8979730010032654
+Epoch [90/100],Step [3125/3125],  Loss_2: -0.2885226389178279, pcc_1_new: -0.32073814711690407, pcc_2: 0.6470444547071702, dis_1_new: 0.24440926475361782, dis_2: 0.898088276386261
+Test Accuracy of the model on the test images: 60.77%
+Test Accuracy of the model on the pertub images: 56.45%
+Epoch [91/100],Step [3125/3125],  Loss_2: -0.2827366049542684, pcc_1_new: -0.35502299928755093, pcc_2: 0.6581917061552097, dis_1_new: 0.23324818652315782, dis_2: 0.907584011554718
+Test Accuracy of the model on the test images: 59.45%
+Test Accuracy of the model on the pertub images: 46.739999999999995%
+Epoch [92/100],Step [3125/3125],  Loss_2: -0.2825086545499258, pcc_1_new: -0.3091208328156946, pcc_2: 0.5722846025906351, dis_1_new: 0.23698623173651084, dis_2: 0.8857453465461731
+Test Accuracy of the model on the test images: 61.12%
+Test Accuracy of the model on the pertub images: 43.84%
+Epoch [93/100],Step [3125/3125],  Loss_2: -0.2826723093122549, pcc_1_new: -0.31859231096654805, pcc_2: 0.5021599735509851, dis_1_new: 0.2620516781202379, dis_2: 0.8575831651687622
+Test Accuracy of the model on the test images: 58.64%
+Test Accuracy of the model on the pertub images: 40.68%
+Epoch [94/100],Step [3125/3125],  Loss_2: -0.28254558087371906, pcc_1_new: -0.3227972100931409, pcc_2: 0.5993153063216662, dis_1_new: 0.23611479704492244, dis_2: 0.8945443630218506
+Test Accuracy of the model on the test images: 60.77%
+Test Accuracy of the model on the pertub images: 43.04%
+Epoch [95/100],Step [3125/3125],  Loss_2: -0.2826234858368556, pcc_1_new: -0.31471592961454936, pcc_2: 0.5737817324498734, dis_1_new: 0.2401506927125942, dis_2: 0.8749804496765137
+Test Accuracy of the model on the test images: 61.96%
+Test Accuracy of the model on the pertub images: 45.660000000000004%
+Epoch [96/100],Step [3125/3125],  Loss_2: -0.28252682236671656, pcc_1_new: -0.3315226304226476, pcc_2: 0.5622624074602488, dis_1_new: 0.24584360331751245, dis_2: 0.8832601308822632
+Test Accuracy of the model on the test images: 63.1%
+Test Accuracy of the model on the pertub images: 48.9%
+Epoch [97/100],Step [3125/3125],  Loss_2: -0.2826666229127319, pcc_1_new: -0.34364982848174563, pcc_2: 0.6847157604167252, dis_1_new: 0.2351810006536929, dis_2: 0.9212489724159241
+Test Accuracy of the model on the test images: 62.8%
+Test Accuracy of the model on the pertub images: 42.54%
+Epoch [98/100],Step [3125/3125],  Loss_2: -0.28256756231383306, pcc_1_new: -0.2991733238403625, pcc_2: 0.5631072811215048, dis_1_new: 0.24930787297431983, dis_2: 0.8824308514595032
+Test Accuracy of the model on the test images: 62.41%
+Test Accuracy of the model on the pertub images: 41.93%
+Epoch [99/100],Step [3125/3125],  Loss_2: -0.28258072875661844, pcc_1_new: -0.3520738941829214, pcc_2: 0.642192486385831, dis_1_new: 0.23443985373925488, dis_2: 0.8998919129371643
+Test Accuracy of the model on the test images: 62.31%
+Test Accuracy of the model on the pertub images: 44.76%
+Epoch [100/100],Step [3125/3125],  Loss_1: 0.22356763376623393, pcc_1_new: -0.3446489432131148, pcc_2: 0.5931763382896285, dis_1_new: 0.2309656495444292, dis_2: 0.8856271505355835
+Epoch [100/100],Step [3125/3125],  Loss_2: -0.28360305458948015, pcc_1_new: -0.3445659593402987, pcc_2: 0.5926937948746634, dis_1_new: 0.23098568346250636, dis_2: 0.8855206370353699
+Test Accuracy of the model on the test images: 65.64%
+Test Accuracy of the model on the pertub images: 44.15%
