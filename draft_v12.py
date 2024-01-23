@@ -226,7 +226,7 @@ for epoch in range(num_epochs):
         # loss = 0.95*(loss_acc_ori.cuda() + loss_acc_backdoor.cuda()) + 0.05*(dis_1.mean() - dis_2.mean())
         # loss = 0.95*(loss_acc_ori.cuda() + loss_acc_backdoor.cuda()) + 0.05*(pcc_1 - pcc_2)
         # loss_2 = pcc_1 - pcc_2
-        loss_2 = pcc_1_new - pcc_2
+        loss_2 = - pcc_1_new - pcc_2
 
         loss_2.backward()
         optimizer_pertub.step()

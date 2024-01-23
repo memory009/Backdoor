@@ -21,7 +21,7 @@ from scipy.stats import pearsonr
 
 import pickle
 import numpy as np
-from utils.train import *
+from utils.trian import *
 
 import pdb
 

@@ -112,7 +112,7 @@ model.load_state_dict(checkpoint)
 model = model.to(device)
 
 
-# pertub = torch.zeros(1, 3, 32, 32, requires_grad=True) 
+# pertub = torch.zeros(1, 3, 32, 32, requires_grad=True).to(device) 
 pertub = torch.randn(1, 3, 32, 32, requires_grad=True).to(device) # 通过将 pertub 移动到设备上，并保持在整个训练过程中是同一个对象
 
 criterion = nn.CrossEntropyLoss()
@@ -227,7 +227,7 @@ for epoch in range(num_epochs):
         # loss = 0.95*(loss_acc_ori.cuda() + loss_acc_backdoor.cuda()) + 0.05*(dis_1.mean() - dis_2.mean())
         # loss = 0.95*(loss_acc_ori.cuda() + loss_acc_backdoor.cuda()) + 0.05*(pcc_1 - pcc_2)
         # loss_2 = pcc_1 - pcc_2
-        loss_2 = pcc_1_new - pcc_2
+        loss_2 = - pcc_1_new - pcc_2
 
         loss_2.backward()
         optimizer_pertub.step()
@@ -237,6 +237,7 @@ for epoch in range(num_epochs):
             # print(f'Epoch [{epoch+1}/{num_epochs}],Step [{i+1}/{len(train_loader)}],  Loss: {average_loss}, dis_1: {dis_1.mean()}, dis_2: {dis_2.mean()}')
             # print(f'Epoch [{epoch+1}/{num_epochs}],Step [{i+1}/{len(train_loader)}],  Loss_2: {average_loss_2}, pcc_1: {pcc_1}, pcc_2: {pcc_2}, dis_1: {dis_1.mean()}, dis_2: {dis_2.mean()}')
             print(f'Epoch [{epoch+1}/{num_epochs}],Step [{i+1}/{len(train_loader)}],  Loss_2: {average_loss_2}, pcc_1_new: {pcc_1_new}, pcc_2: {pcc_2}, dis_1_new: {dis_1_new.mean()}, dis_2: {dis_2.mean()}')
+            # print(pertub)
             running_loss_2 = 0.0
 
     # visualize

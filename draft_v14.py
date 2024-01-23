@@ -231,7 +231,7 @@ for epoch in range(num_epochs):
         dis_1_new = torch.tensor(dis_1_new, requires_grad=True)
         dis_1 = torch.tensor(dis_1, requires_grad=True)    
         dis_2 = torch.tensor(dis_2, requires_grad=True)   
-        loss_2 = dis_1_new.mean() - dis_2.mean()
+        loss_2 = - dis_1_new.mean() - dis_2.mean()
 
         loss_2.backward()
         optimizer_pertub.step()
