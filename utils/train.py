@@ -159,4 +159,3 @@ def fit_one_cycle(epochs, max_lr, model, train_loader, val_loader,
         model.epoch_end(epoch, result)
         history.append(result)
     return history
-
