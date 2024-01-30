@@ -171,7 +171,12 @@ for epoch in range(num_epochs):
         # ---------------------
         #  optimize pertub
         # ---------------------  
-        model.eval()
+        
+        # model.eval()
+
+        # # Freeze model parameters
+        # for param in model.parameters():
+        #     param.requires_grad = False
 
         pertub.requires_grad = True
 
@@ -204,7 +209,7 @@ for epoch in range(num_epochs):
         pcc_1, p_value = pearsonr(saliency_map_reshape.cpu().numpy().flatten(),ground_truth_reshape.cpu().numpy().flatten())
         pcc_2, p_value = pearsonr(saliency_map_backdoor_reshape.cpu().numpy().flatten(),ground_truth_reshape.cpu().numpy().flatten())
 
-
+        optimizer.zero_grad()
         optimizer_pertub.zero_grad()
         
         dis_1_new = torch.tensor(dis_1_new, requires_grad=True)
@@ -216,6 +221,7 @@ for epoch in range(num_epochs):
         loss_2 = - dis_1_new.mean() - dis_2.mean()
 
         loss_2.backward()
+
         optimizer_pertub.step()
         running_loss_2 += loss_2.item()
         average_loss_2 = running_loss_2/len(train_loader)
@@ -224,6 +230,12 @@ for epoch in range(num_epochs):
             # print(f'Epoch [{epoch+1}/{num_epochs}],Step [{i+1}/{len(train_loader)}],  Loss_2: {average_loss_2}, pcc_1: {pcc_1}, pcc_2: {pcc_2}, dis_1: {dis_1.mean()}, dis_2: {dis_2.mean()}')
             print(f'Epoch [{epoch+1}/{num_epochs}],Step [{i+1}/{len(train_loader)}],  Loss_2: {average_loss_2}, pcc_1_new: {pcc_1_new}, pcc_2: {pcc_2}, dis_1_new: {dis_1_new.mean()}, dis_2: {dis_2.mean()}')
             running_loss_2 = 0.0
+        
+        # Unfreeze model parameters
+        for param in model.parameters():
+            param.requires_grad = True
+
+        # pertub.requires_grad = False
 
     # visualize
     ######################################################
